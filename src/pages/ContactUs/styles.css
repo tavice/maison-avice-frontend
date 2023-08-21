@@ -1,0 +1,77 @@
+.contact-us {
+    padding: 50px;
+    background-color: #fafafa;
+  }
+  
+  .contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .contact-image {
+    width: 50%;
+  }
+  
+  .contact-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .contact-form {
+    width: 50%;
+    text-align: center;
+  }
+  
+  .contact-form h2 {
+    font-family: 'Georgia', serif;
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+  
+  .form-field {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-field label {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .form-field input,
+  .form-field textarea {
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .cta-button {
+    background-color: #333;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #555;
+  }
+  
+  /* Responsive styles for tablets and smaller devices */
+  @media (max-width: 768px) {
+    .contact-image,
+    .contact-form {
+      width: 100%;
+    }
+  
+    .form-field input,
+    .form-field textarea {
+      width: 90%;
+    }
+  }
+  
