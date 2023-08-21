@@ -3,7 +3,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 50px;
-    background-color: #fafafa; 
+    background-color: #fafafa;
+    flex-wrap: wrap; 
   }
   
   .about-text {
@@ -29,5 +30,20 @@
   .about-image img {
     max-width: 100%;
     border-radius: 10px; 
+  }
+
+  /* Mobile styles */
+@media (max-width: 768px) {
+    .about-us {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px; /* Reduce padding on smaller screens */
+    }
+  
+    .about-text,
+    .about-image {
+      width: 100%; /* Full width on smaller screens */
+      margin-bottom: 20px; /* Add spacing between text and image */
+    }
   }
   

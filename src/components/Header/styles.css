@@ -4,6 +4,7 @@
     align-items: center;
     padding: 20px;
     background-color: #f0f0f0;
+   
   }
   
   .logo {
@@ -11,7 +12,20 @@
     font-size: 24px;
     font-weight: bold;
   }
+
+  .menu-button {
+    display: none; /* Hide by default */
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
   
+  .nav {
+    transition: all 0.3s; /* Transition effect */
+  }
+  
+
   .nav-list {
     list-style: none;
     display: flex;
@@ -27,5 +41,37 @@
   
   .nav-list a:hover {
     color: #555;
+  }
+  
+  /* Mobile styles */
+/* Mobile styles */
+@media (max-width: 768px) {
+    .menu-button {
+      display: block; /* Show the menu button */
+    }
+  
+    .nav {
+      display: none; /* Hide by default */
+      flex-direction: column;
+      width: 100%;
+      background-color: #f0f0f0;
+    }
+  
+    .nav.open {
+      display: flex; /* Show when open */
+    }
+  
+    .nav-list {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+    }
+  
+    .nav-list a {
+      font-size: 18px;
+      padding: 10px;
+      width: 100%;
+      text-align: center;
+    }
   }
   

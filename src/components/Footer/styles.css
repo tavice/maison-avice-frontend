@@ -4,6 +4,7 @@
     padding: 40px;
     background-color: #333;
     color: white;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
   }
   
   .footer h4 {
@@ -23,6 +24,7 @@
   
   .footer-newsletter form {
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping inside the form */
   }
   
   .footer-newsletter input {
@@ -46,3 +48,28 @@
     background-color: #777;
   }
   
+
+  /* Mobile styles */
+@media (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px; 
+    }
+  
+    .footer-contact,
+    .footer-social,
+    .footer-newsletter {
+      width: 100%; 
+      margin-bottom: 20px; 
+    }
+  
+    .footer-newsletter input {
+      flex: 1 0 70%;
+      margin-right: 10px;
+    }
+  
+    .footer-newsletter button {
+      flex: 1 0 28%; 
+    }
+  }

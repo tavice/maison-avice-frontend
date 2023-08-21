@@ -1,45 +1,82 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
 .testimonials {
-    padding: 50px;
-    text-align: center;
-    background-color: #fafafa; /* Light background */
-  }
-  
-  .testimonials h2 {
-    font-family: 'Georgia', serif;
-    font-size: 28px;
-    margin-bottom: 40px;
-  }
-  
-  .testimonials-slider {
-    display: flex;
-    overflow: hidden;
-    /* TO DO Add slider controls or animations  */
-  }
-  
-  .testimonial-card {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  padding: 50px;
+  text-align: center;
+  background-color: #fafafa; /* Light background */
+}
+
+.testimonials h2 {
+  font-family: "Georgia", serif;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 15px;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.testimonial-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+  text-align: center; /* Centers text */
+  width: 100%;
+}
+
+.testimonial-card img {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.testimonial-card p {
+  font-family: "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.testimonial-card h4 {
+  font-family: "Georgia", serif;
+  font-size: 20px;
+}
+
+@media (max-width: 480px) {
+  .testimonials {
     padding: 20px;
   }
-  
+
+  .testimonial-container {
+    padding: 20px;
+    margin: 10px;
+  }
+
   .testimonial-card img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 20px;
+    width: 150px;
   }
-  
-  .testimonial-card p {
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
-  
+
   .testimonial-card h4 {
-    font-family: 'Georgia', serif;
-    font-size: 20px;
+    font-size: 18px;
   }
-  
+
+  .testimonial-card p {
+    font-size: 16px;
+  }
+}

@@ -36,4 +36,23 @@
     font-size: 18px;
     padding: 0 20px 20px;
   }
+
+  @media (max-width: 480px) {
+    .services h2 {
+      font-size: 24px;
+    }
+    
+    .service-card h3 {
+      font-size: 20px;
+    }
+  
+    .service-card p {
+      font-size: 16px;
+    }
+  
+    .services-grid {
+      gap: 20px;
+    }
+  }
+  
   
