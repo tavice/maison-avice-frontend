@@ -1,0 +1,45 @@
+.testimonials {
+    padding: 50px;
+    text-align: center;
+    background-color: #fafafa; /* Light background */
+  }
+  
+  .testimonials h2 {
+    font-family: 'Georgia', serif;
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+  
+  .testimonials-slider {
+    display: flex;
+    overflow: hidden;
+    /* TO DO Add slider controls or animations  */
+  }
+  
+  .testimonial-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .testimonial-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-card p {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-card h4 {
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+  }
+  
