@@ -1,63 +1,110 @@
+body {
+  margin: 0;
+  padding-top: 12vw;
+}
+
 .header {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  background-color: #f0f0f0;
-}
-
-.logo-image img {
-  width: 50%;
-  height: 50%;
-}
-
-.company-name{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0; 
+  padding: 0; 
+}
 
+.logo-and-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.logo-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.logo-image-banner img {
+  width: 30%; /* Adjust based on actual size */
+  height: 30%; /* Adjust to fit within the banner */
+  margin: 0 20px; /* Adds margin on both sides */
+}
+
+.company-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .company-name-h1 {
-  font-family: 'The Seasons', sans-serif;
-  font-size: 40px;
-  
+  font-family: "The Seasons", sans-serif;
+  font-size: 3em;
   color: #21204c;
 }
 
-.company-name-h2{
-  font-family: 'Antipasto', sans-serif;
-  font-size: 24px;
+.company-name-h2 {
+  font-family: "Antipasto", sans-serif;
+  font-size: 2em;
   font-weight: 200;
   color: #21204c;
+  margin-top: 1px;
+}
+
+.nav-banner {
+  display: flex;
+  background-color: #21204c;
+  width: 100vw;
+  height:12vw;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
 .menu-button {
   display: none;
-  font-size: 36px;
+  font-size: 0.7em;
   background: none;
   border: none;
   cursor: pointer;
 }
 
 .nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.3s;
+  font-size: 2em;
 }
 
 .nav-list {
   list-style: none;
   display: flex;
-  gap: 40px;
+  gap: 50px;
+  margin: 10%;
+  display: flex;
+  align-items: center;
+ 
 }
 
 .nav-list a {
   text-decoration: none;
-  color: #191A34;
-  font-family: 'Antipasto', sans-serif;
+  color: #fff;
+  font-family: "Antipasto", sans-serif;
   transition: color 0.3s;
 }
 
 .nav-list a:hover {
-  color: #D7242A;
+  color: #d7242a;
 }
 
 @media (max-width: 768px) {
@@ -91,16 +138,16 @@
 }
 
 .contact-button {
-  background-color: #333;
+  background-color: #ff6d32;
   color: #fff;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 1em;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .contact-button:hover {
-  background-color: #D7242A;
+  background-color: #d7242a;
 }

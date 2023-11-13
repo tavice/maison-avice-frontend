@@ -21,6 +21,7 @@ body {
   font-family: 'Antipasto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: "../src/assets/images/poppy_pattern_transparent.png";
 }
 
 code {
