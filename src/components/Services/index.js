@@ -12,13 +12,13 @@ function Services() {
       <div className="services-grid">
         <div className="service-card">
           <img src={serviceImage1} alt="Service 1" />
-          <h3>Residential Design</h3>
+          <h3>New Construction </h3>
           <p>Creating elegant and functional living spaces that reflect your unique style.</p>
         </div>
         <div className="service-card">
           <img src={serviceImage2} alt="Service 2" />
-          <h3>Commercial Design</h3>
-          <p>Transforming commercial spaces into engaging environments that enhance productivity.</p>
+          <h3>Remodel</h3>
+          <p>Turning an exisitng space into the new space of your dream !</p>
         </div>
         <div className="service-card">
           <img src={serviceImage3} alt="Service 3" />
