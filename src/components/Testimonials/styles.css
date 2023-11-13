@@ -8,9 +8,10 @@
 }
 
 .testimonials h2 {
-  font-family: "Georgia", serif;
+  font-family: "The Seasons", sans-serif;
   font-size: 28px;
   margin-bottom: 40px;
+  color: #21204C
 }
 
 .testimonial-container {
@@ -47,14 +48,14 @@
 }
 
 .testimonial-card p {
-  font-family: "Arial", sans-serif;
+  font-family: "Antipasto", sans-serif;
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
 .testimonial-card h4 {
-  font-family: "Georgia", serif;
+  font-family: "The Seasons", sans-serif;
   font-size: 20px;
 }
 

@@ -5,9 +5,10 @@
     margin: 0 auto; /* Centers the container */
   }
   .services h2 {
-    font-family: 'Georgia', serif;
+    font-family: 'The Seasons', sans-serif;
     font-size: 28px;
     margin-bottom: 40px;
+    color: #21204C
   }
   
   .services-grid {

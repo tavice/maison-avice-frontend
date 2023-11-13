@@ -1,77 +1,106 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #f0f0f0;
-   
-  }
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.logo-image img {
+  width: 50%;
+  height: 50%;
+}
+
+.company-name{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.company-name-h1 {
+  font-family: 'The Seasons', sans-serif;
+  font-size: 40px;
   
-  .logo {
-    font-family: 'Georgia', serif;
-    font-size: 24px;
-    font-weight: bold;
+  color: #21204c;
+}
+
+.company-name-h2{
+  font-family: 'Antipasto', sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  color: #21204c;
+}
+
+.menu-button {
+  display: none;
+  font-size: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav {
+  transition: all 0.3s;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #191A34;
+  font-family: 'Antipasto', sans-serif;
+  transition: color 0.3s;
+}
+
+.nav-list a:hover {
+  color: #D7242A;
+}
+
+@media (max-width: 768px) {
+  .menu-button {
+    display: block;
   }
 
-  .menu-button {
-    display: none; /* Hide by default */
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
   .nav {
-    transition: all 0.3s; /* Transition effect */
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f0f0f0;
   }
-  
+
+  .nav.open {
+    display: flex;
+  }
 
   .nav-list {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
   }
-  
+
   .nav-list a {
-    text-decoration: none;
-    color: #333;
-    font-family: 'Arial', sans-serif;
-    transition: color 0.3s;
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
   }
-  
-  .nav-list a:hover {
-    color: #555;
-  }
-  
-  /* Mobile styles */
-/* Mobile styles */
-@media (max-width: 768px) {
-    .menu-button {
-      display: block; /* Show the menu button */
-    }
-  
-    .nav {
-      display: none; /* Hide by default */
-      flex-direction: column;
-      width: 100%;
-      background-color: #f0f0f0;
-    }
-  
-    .nav.open {
-      display: flex; /* Show when open */
-    }
-  
-    .nav-list {
-      flex-direction: column;
-      gap: 10px;
-      width: 100%;
-    }
-  
-    .nav-list a {
-      font-size: 18px;
-      padding: 10px;
-      width: 100%;
-      text-align: center;
-    }
-  }
-  
+}
+
+.contact-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #D7242A;
+}

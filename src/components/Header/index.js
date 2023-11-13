@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./styles.css";
+import logoImage from "../../assets/images/poppy_transparent.png";
 
 function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -10,7 +11,22 @@ function Header() {
 
   return (
     <header className="header">
-      <div className="logo">Maison Avice</div>
+      <div className="logo-image">
+        <img
+          src={logoImage}
+          alt="Maison Avice"
+        />
+      </div>
+
+      <div className="company-name">
+        <div className="company-name-h1">
+          <h1>MAISON AVICE</h1>
+        </div>
+        <div className="company-name-h2">
+          <h2>INTERIOR DESIGN</h2>
+        </div>
+      </div>
+
       <button className="menu-button" onClick={toggleMenu}>
         {isMenuOpen ? "X" : "☰"}
       </button>
@@ -26,8 +42,9 @@ function Header() {
           <li>
             <a href="/services">Services</a>
           </li>
+
           <li>
-            <a href="/contact">Contact</a>
+            <button className="contact-button">Contact Us</button>
           </li>
         </ul>
       </nav>
