@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 //import components
 
@@ -8,10 +8,19 @@ import Services from "../../components/Services";
 import Testimonials from "../../components/Testimonials";
 
 const Home = () => {
+  const aboutUsRef = useRef(null); // Create a ref for the AboutUs component
+
+  const scrollToAbout = () => {
+    aboutUsRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
-      <Banner />
-      <AboutUs />
+      <Banner scrollToAbout={scrollToAbout} />
+      <div ref={aboutUsRef}>
+        {/* Attach the ref to the aboutUs div */}
+        <AboutUs />
+      </div>
       <Services />
       <Testimonials />
     </>

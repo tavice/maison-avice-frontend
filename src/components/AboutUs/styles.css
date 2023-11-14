@@ -2,7 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px;
+    padding-top: 12vw; 
+    margin-bottom: 12vw;
     background-color: #fafafa;
     flex-wrap: wrap; 
   }

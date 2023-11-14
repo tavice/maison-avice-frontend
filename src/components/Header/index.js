@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import "./styles.css";
-import logoImage from "../../assets/images/poppy_transparent.png";
-import logoImageMonogram from "../../assets/images/monogram_poppy_transparent.png";
-import poppyBackground from "../../assets/images/poppy_pattern_transparent.png";
 
-//import PoppyAnimation from "../PoppyAnimation";
-import PoppyAnimation from "../PoppyAnimation";
+import logoImageMonogram from "../../assets/images/monogram_poppy_transparent.png";
+
 
 function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -14,11 +11,20 @@ function Header() {
     setMenuOpen(!isMenuOpen);
   };
 
+  const handleContactClick = () => {
+    window.location.href = "thomasavice@maisonavice.com?subject=Inquiry from the Website&body=Hi there,";
+  };
+  
+
+
+
   return (
-    <header className="header" style={{ backgroundImage: `url(${poppyBackground})` }}>
-      <div className="nav-banner" >
-      <div className="logo-image-banner">
-        
+    <header
+      className="header"
+     
+    >
+      <div className="nav-banner">
+        <div className="logo-image-banner">
           <img src={logoImageMonogram} alt="Maison Avice" />
           <h1 className="company-name-h1-banner">MAISON AVICE</h1>
         </div>
@@ -39,26 +45,12 @@ function Header() {
             </li>
 
             <li>
-              <button className="contact-button">Contact Us</button>
+            <button className="contact-button" onClick={handleContactClick}>Contact Us</button>
             </li>
           </ul>
         </nav>
       </div>
-      <div className="logo-and-image" >
-        
     
-          <PoppyAnimation />
-     
-
-        <div className="company-name">
-          <div className="company-name-h1">
-            <h1>MAISON AVICE</h1>
-          </div>
-          <div className="company-name-h2">
-            <h2>INTERIOR DESIGN</h2>
-          </div>
-        </div>
-      </div>
     </header>
   );
 }
