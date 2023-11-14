@@ -1,0 +1,59 @@
+/* Set up the container to center its children using Flexbox */
+.grid {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between items */
+    padding: 1em;
+  }
+  
+  /* Style for individual grid items */
+  .grid-item {
+    background-color: #fff; /* Background color for grid items */
+    border: 1px solid #ddd; /* Border for grid items */
+    border-radius: 4px; /* Optional: rounded corners for grid items */
+    overflow: hidden; /* Makes sure the content fits within the borders */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: adds some shadow for depth */
+  }
+  
+  /* Ensure images are responsive and fit their containers */
+  .grid-item img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below images */
+  }
+  
+  /* Style for the title */
+  .grid-item h3 {
+    text-align: center;
+    padding: 0.5em;
+    margin: 0; /* Removes default margin */
+    background-color: #f8f8f8; /* Slight background for the title area */
+    border-top: 1px solid #ddd; /* Adds a border between image and title */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1200px) {
+    .grid {
+      justify-content: space-around;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .grid {
+      justify-content: space-between;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .grid {
+      padding: 0.5em;
+      justify-content: center;
+    }
+  
+    .grid-item {
+      width: 100%; /* Full width grid items on small screens */
+    }
+  }
+  

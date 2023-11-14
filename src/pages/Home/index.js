@@ -6,6 +6,7 @@ import Banner from "../../components/Banner";
 import AboutUs from "../../components/AboutUs";
 import Services from "../../components/Services";
 import Testimonials from "../../components/Testimonials";
+import Portfolio from "../../components/Portfolio";
 
 const Home = () => {
   const aboutUsRef = useRef(null); // Create a ref for the AboutUs component
@@ -22,6 +23,7 @@ const Home = () => {
         <AboutUs />
       </div>
       <Services />
+      <Portfolio />
       <Testimonials />
     </>
   );
