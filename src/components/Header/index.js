@@ -4,6 +4,9 @@ import logoImage from "../../assets/images/poppy_transparent.png";
 import logoImageMonogram from "../../assets/images/monogram_poppy_transparent.png";
 import poppyBackground from "../../assets/images/poppy_pattern_transparent.png";
 
+//import PoppyAnimation from "../PoppyAnimation";
+import PoppyAnimation from "../PoppyAnimation";
+
 function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
@@ -15,7 +18,9 @@ function Header() {
     <header className="header" style={{ backgroundImage: `url(${poppyBackground})` }}>
       <div className="nav-banner" >
       <div className="logo-image-banner">
+        
           <img src={logoImageMonogram} alt="Maison Avice" />
+          <h1 className="company-name-h1-banner">MAISON AVICE</h1>
         </div>
         <button className="menu-button" onClick={toggleMenu}>
           {isMenuOpen ? "X" : "☰"}
@@ -42,9 +47,8 @@ function Header() {
       <div className="logo-and-image" >
         
     
-        <div className="logo-image">
-          <img src={logoImage} alt="Maison Avice" />
-        </div>
+          <PoppyAnimation />
+     
 
         <div className="company-name">
           <div className="company-name-h1">

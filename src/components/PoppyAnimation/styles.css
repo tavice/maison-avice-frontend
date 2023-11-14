@@ -1,0 +1,21 @@
+.poppy-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 2; /* Keep it in the background */
+  }
+  
+  .poppy {
+    position: absolute;
+    max-width: 50%; /* Set a max width for your poppy image */
+    max-height: 50%; /* Set a max height for your poppy image */
+    will-change: transform; /* Optimizes animations */
+    /* Remove specific positioning if previously set */
+
+  }
+  
+
+  
