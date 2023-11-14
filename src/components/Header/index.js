@@ -3,7 +3,6 @@ import "./styles.css";
 
 import logoImageMonogram from "../../assets/images/monogram_poppy_transparent.png";
 
-
 function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
@@ -12,17 +11,12 @@ function Header() {
   };
 
   const handleContactClick = () => {
-    window.location.href = "thomasavice@maisonavice.com?subject=Inquiry from the Website&body=Hi there,";
+    window.location.href =
+      "thomasavice@maisonavice.com?subject=Inquiry from the Website&body=Hi there,";
   };
-  
-
-
 
   return (
-    <header
-      className="header"
-     
-    >
+    <header className="header">
       <div className="nav-banner">
         <div className="logo-image-banner">
           <img src={logoImageMonogram} alt="Maison Avice" />
@@ -45,12 +39,16 @@ function Header() {
             </li>
 
             <li>
-            <button className="contact-button" onClick={handleContactClick}>Contact Us</button>
+              <a
+                href="mailto:thomasavice@maisonavice.com?subject=Contact%20from%20Our%20Website&body=Hello,%20I%20would%20like%20to%20inquire%20about..."
+                className="contact-button"
+              >
+                Contact Us
+              </a>
             </li>
           </ul>
         </nav>
       </div>
-    
     </header>
   );
 }
