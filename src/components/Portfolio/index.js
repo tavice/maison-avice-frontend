@@ -2,6 +2,12 @@ import React, { useEffect, useRef } from 'react';
 import Masonry from 'masonry-layout';
 import './styles.css';
 
+//import images from '../../assets/images/portfolio_images';
+import los_altos_mansion from '../../assets/images/portfolio_images/los_altos_hills_mansion.png';
+import chalet_forestier from '../../assets/images/portfolio_images/chalet_forest.png';
+import pacific_cliff_mansion from '../../assets/images/portfolio_images/pacific_cliff_mansion.png';
+import andalousian_villa from '../../assets/images/portfolio_images/andalousian_mansion.png';
+
 const Portfolio = () => {
   const gridRef = useRef(null); // This ref will point to the grid container
 
@@ -16,10 +22,10 @@ const Portfolio = () => {
 
   // Dummy data for the portfolio items
   const portfolioItems = [
-    { id: 1, title: 'Project 1', image: 'https://loremflickr.com/360/360' },
-    { id: 2, title: 'Project 2', image: 'https://loremflickr.com/360/360 ' },
-    { id: 3, title: 'Project 3', image: 'https://loremflickr.com/360/360 ' },
-    { id: 4, title: 'Project 4', image: 'https://loremflickr.com/360/360 ' },
+    { id: 1, title: 'Los Altos Hills Mansion', image: los_altos_mansion },
+    { id: 2, title: 'Sonoma Retreat', image: chalet_forestier },
+    { id: 3, title: 'Pacific Cliff Estate', image: pacific_cliff_mansion },
+    { id: 4, title: 'Andalousian Villa', image: andalousian_villa },
     // ... other items
   ];
 

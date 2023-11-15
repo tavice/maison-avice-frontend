@@ -15,6 +15,25 @@
     border-radius: 4px; /* Optional: rounded corners for grid items */
     overflow: hidden; /* Makes sure the content fits within the borders */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: adds some shadow for depth */
+    max-width: 1000px; /* Adjust this value as needed */
+    margin: auto;
+  }
+
+  /* Hover effect to scale the image up slightly */
+.grid-item:hover,
+.grid-item:focus-within { /* Focus within for keyboard navigation */
+  transform: scale(1.05);
+  z-index: 10; /* Ensure the scaled item is above the others */
+  position: relative; /* Required for z-index to take effect */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Enhance the shadow for depth */
+}
+
+/* Style changes when an item is clicked */
+.grid-item.active {
+    transform: scale(1.5);
+    z-index: 10;
+    position: relative;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   }
   
   /* Ensure images are responsive and fit their containers */
