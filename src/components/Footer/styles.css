@@ -4,6 +4,7 @@
     padding: 40px;
     background-color: #21204C;
     color: white;
+    align-items: center;
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
   }
   
@@ -43,6 +44,8 @@
     cursor: pointer;
     transition: background-color 0.3s;
   }
+
+  
   
   .footer-newsletter button:hover {
     background-color: #777;
@@ -62,6 +65,11 @@
     .footer-newsletter {
       width: 100%; 
       margin-bottom: 20px; 
+      text-align: center;
+    }
+
+    .footer-newsletter form {
+      justify-content: center;
     }
   
     .footer-newsletter input {
@@ -72,4 +80,38 @@
     .footer-newsletter button {
       flex: 1 0 28%; 
     }
+
+    .footer-social {
+      /* Wrap social links on smaller screens */
+      flex-wrap: wrap;
+      justify-content: center; /* Center the links */
+    }
+    
   }
+
+
+  /* Very small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .footer h4 {
+    font-size: 20px; /* Slightly smaller to fit narrow screens */
+  }
+
+  .footer p,
+  .footer a {
+    font-size: 16px; /* Smaller font size for better readability */
+  }
+
+  .footer-newsletter input,
+  .footer-newsletter button {
+    flex: 1 0 auto; /* Take full width on separate lines */
+    margin: 5px 0; /* Adjust margin for stacked layout */
+  }
+
+  .footer-newsletter form {
+    flex-direction: column; /* Stack input field and button */
+  }
+
+  .footer-newsletter button {
+    width: 100%; /* Full width for the button */
+  }
+}

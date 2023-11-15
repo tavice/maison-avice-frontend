@@ -10,10 +10,7 @@ function Header() {
     setMenuOpen(!isMenuOpen);
   };
 
-  const handleContactClick = () => {
-    window.location.href =
-      "thomasavice@maisonavice.com?subject=Inquiry from the Website&body=Hi there,";
-  };
+
 
   return (
     <header className="header">

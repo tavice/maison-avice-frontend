@@ -1,80 +1,72 @@
-
-
+/* Base styles for the header */
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
 
+/* Styles for the navigation banner */
 .nav-banner {
   display: flex;
   background-color: #21204c;
-  width: 100vw;
-  height:12vw;
+  width: 100%;
+  height: 120px; /* Fixed height */
   flex-direction: row;
   align-items: center;
-  
-
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
 }
 
+/* Styles for the logo and image container */
 .logo-and-image {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-
 }
 
-.logo-animation {
-  width: 100%;
-  height: 100%;
-}
-
-
-
-
-
+/* Styles for the logo within the banner */
 .logo-image-banner {
   display: flex;
   flex-direction: row;
   align-items: center; 
   justify-content: flex-start;
-  margin-left: 20px; 
- 
+  padding-left: 20px;
 }
 
+/* Image styles */
 .logo-image-banner img {
-  width: 20%; 
+  max-width: 200px; /* Maximum width to control sizing on larger screens */
   height: auto;
-  margin-right: 20px; 
+  margin-right: 20px;
 }
 
-.company-name-h1-banner{
+/* Company name styles */
+.company-name-h1-banner {
   font-family: "The Seasons", sans-serif;
-  font-size: 3em;
+  font-size: 3rem; /* Using rem for consistent sizing */
   color: white;
-  margin-left: 20px;
 }
 
-
-
-
+/* Menu button - hidden by default and shown in smaller screens via media query */
 .menu-button {
-  display: none;
-  font-size: 0.7em;
+  position: absolute;
+
+  right: 20px; /* Adjust as needed */
+  z-index: 101; /* Above the nav */
+  /* Ensure it is visually consistent */
   background: none;
   border: none;
   cursor: pointer;
+  font-size: 2rem; /* Adjust as needed */
+  padding: 10px; /* Gives area for touch/click */
+  
 }
 
+/* Navigation styles */
 .nav {
   display: flex;
   align-items: center;
@@ -83,17 +75,16 @@
   font-size: 2em;
 }
 
+/* Navigation list styles */
 .nav-list {
   list-style: none;
   display: flex;
   gap: 50px;
-  margin: 10%;
-  display: flex;
   align-items: center;
-  margin-left: 50px;
- 
+  padding-left: 50px;
 }
 
+/* Navigation link styles */
 .nav-list a {
   text-decoration: none;
   color: #fff;
@@ -101,41 +92,12 @@
   transition: color 0.3s;
 }
 
+/* Hover effect for navigation links */
 .nav-list a:hover {
   color: #d7242a;
 }
 
-@media (max-width: 768px) {
-  .menu-button {
-    display: block;
-  }
-
-  .nav {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #f0f0f0;
-    
-  }
-
-  .nav.open {
-    display: flex;
-  }
-
-  .nav-list {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
-
-  .nav-list a {
-    font-size: 18px;
-    padding: 10px;
-    width: 100%;
-    text-align: center;
-  }
-}
-
+/* Styles for the contact button */
 .contact-button {
   background-color: #ff6d32;
   color: #fff;
@@ -145,11 +107,133 @@
   font-size: 1em;
   cursor: pointer;
   transition: background-color 0.3s;
-  width: 100%;
 }
 
+/* Hover effect for the contact button */
 .contact-button:hover {
   background-color: #d7242a;
 }
 
+.menu-button {
+  display: none; /* Hidden by default */
+  
+}
 
+/* Media queries for responsive adjustments */
+@media (max-width: 992px) {
+  .nav-list a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-button {
+    display: block;
+    position: absolute;
+    right: 10px; /* Adjust as needed */
+    z-index: 101; /* Above the nav */
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem; /* Adjust as needed */
+    padding: 10px; /* Gives area for touch/click */
+  }
+
+  .nav-banner {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo-image-banner img {
+    display: none;
+  }
+  
+  .company-name-h1-banner {
+    font-size: 2.5rem;
+    margin-left: 0px;
+  }
+  
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+  
+  .nav-list a {
+    font-size: 0.8rem;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .menu-button {
+    display: block;
+    color: white;
+    font-size: 1.8rem;
+  }
+
+  .nav {
+    display: none; /* Hidden by default, shown when menu is toggled */
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(33, 32, 76, 0.9); /* Semi-transparent overlay */
+    z-index: 100; /* Under the menu button */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  /* Style the list within the mobile navigation */
+.nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* Space between menu items */
+}
+
+/* Style the list items within the mobile navigation */
+.nav-list a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem; /* Larger font for easier readability */
+  padding: 0.5rem 1rem;
+  border-radius: 5px; /* Optional: for styled touch targets */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Add a hover effect for list items within the mobile navigation */
+.nav-list a:hover, .nav-list a:focus {
+  background-color: #d7242a; /* Highlight color */
+  color: #fff;
+}
+
+}
+
+@media (max-width: 576px) {
+  .nav-banner {
+    height: 50px;
+  }
+  
+  .logo-image-banner img {
+    max-width: 100px;
+  }
+  
+  .company-name-h1-banner {
+    font-size: 1.8rem;
+  }
+  
+  .nav-list a {
+    font-size: 0.7rem;
+  }
+}

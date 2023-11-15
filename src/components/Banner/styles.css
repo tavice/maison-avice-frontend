@@ -42,7 +42,7 @@
 
 .company-name-h1-banner {
   font-family: "The Seasons", sans-serif;
-  font-size: 3em;
+  font-size: 3rem;
   color: white;
   margin-left: 20px;
 }
@@ -55,13 +55,13 @@
 }
 .company-name-h1 {
   font-family: "The Seasons", sans-serif;
-  font-size: 3em;
+  font-size: 3rem;
   color: #21204c;
 }
 
 .company-name-h2 {
   font-family: "Antipasto", sans-serif;
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: 200;
   color: #21204c;
   margin-top: 1px;
