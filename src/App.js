@@ -9,6 +9,7 @@ import ContactUs from "./pages/ContactUs";
 //import components
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Portfolio from "./pages/Portfolio";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
 
       <Footer />
