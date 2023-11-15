@@ -1,51 +1,80 @@
 .about-us {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 12vw; 
-    margin-bottom: 12vw;
-    background-color: #fafafa;
-    flex-wrap: wrap; 
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column; /* Stack elements on mobile by default */
+  align-items: center; /* Center items for a better mobile appearance */
+  padding: 4rem 2rem; /* Consistent padding */
+  background-color: #FEEDEB;
+  gap: 2rem; /* Spacing between elements */
+  margin-top: 80px;
+  height: 100%;
   }
   
   .about-text {
-    width: 45%;
+    max-width: 600px; /* Limit the width to maintain readability */
+  text-align: center; /* Center the text for a modern look */
   }
   
   .about-text h2 {
     font-family: 'The Seasons', sans-serif;
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 2.5rem; /* Larger font size for the title */
+    margin-bottom: 1rem;
     color: #21204C;
   }
   
-  .about-text p {
+  .about-text h3 {
     font-family: 'Antipasto', sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
+    font-size: 1.5rem; /* Adjust the font size for subheading */
+    margin-bottom: 1rem;
+  }
+  
+  .about-text ul {
+    list-style: inside; /* Position bullets inside to align with the text */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .about-text li {
+    margin-bottom: 0.5rem; /* Add some space between list items */
+    font-size: 1.25rem;
   }
   
   .about-image {
-    width: 45%;
+    max-width: 100%; /* Ensure image container doesn't overflow */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: add shadow for depth */
   }
+  
+  
   
   .about-image img {
     max-width: 100%;
     border-radius: 10px; 
   }
 
-  /* Mobile styles */
-@media (max-width: 768px) {
+  .about-image img {
+    width: 100%; /* Ensure image takes up the container width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for the image */
+  }
+  
+  /* Larger devices */
+  @media (min-width: 769px) {
     .about-us {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 20px; /* Reduce padding on smaller screens */
+      flex-direction: row; /* Use row layout on larger screens */
+      justify-content: space-evenly; /* Even spacing */
+      align-items: flex-start; /* Align to the start for a clean look */
     }
   
     .about-text,
     .about-image {
-      width: 100%; /* Full width on smaller screens */
-      margin-bottom: 20px; /* Add spacing between text and image */
+      width: 45%; /* Adjust width for larger screens */
+      text-align: left; /* Align text to the left on larger screens */
+    }
+  
+    .about-text {
+      order: 2; /* Adjust text to come after the image */
+    }
+  
+    .about-image {
+      order: 1; /* Image appears first */
     }
   }
-  

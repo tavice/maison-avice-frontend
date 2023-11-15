@@ -5,7 +5,7 @@ import React, { useRef } from "react";
 import Banner from "../../components/Banner";
 import AboutUs from "../../components/AboutUs";
 import Services from "../../components/Services";
-import Testimonials from "../../components/Testimonials";
+// import Testimonials from "../../components/Testimonials"; //TO DO: Add Testimonials component
 import Portfolio from "../../components/Portfolio";
 
 const Home = () => {
@@ -24,7 +24,7 @@ const Home = () => {
       </div>
       <Services />
       <Portfolio />
-      <Testimonials />
+      {/* <Testimonials /> TO DO: Add Testimonials component */}
     </>
   );
 };
