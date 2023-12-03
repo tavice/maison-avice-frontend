@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
 import axios from "axios";
-import "./styles.css";
+import "./stylesAboutUs.css";
 import teamImage from "../../assets/images/team-image.jpeg";
 
 const AboutUs = ( props ) => {

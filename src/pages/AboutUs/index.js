@@ -21,7 +21,7 @@ const AboutUs = (props) => {
 
   return (
     
-      <div className="about-us">
+      <div className="about-us-page">
         {aboutData && (
           <>
             <div className="grid-section">

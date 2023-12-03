@@ -1,57 +1,55 @@
-.about-us {
-    display: flex;
-    flex-direction: column; /* Stack elements on mobile by default */
-    margin: 2rem auto;
+.about-us-page {
+  display: flex;
+  flex-direction: column; /* Stack elements on mobile by default */
+  margin: 2rem auto;
   padding: 2em;
   margin-top: 100px;
   max-width: 1200px;
   border-radius: 10px;
-  }
-  
-  .grid-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns */
-    gap: 20px;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-  
-  .grid-image {
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  .grid-text {
-    font-size: 1.2em;
-  }
-  
-  .centered-section {
-    text-align: center;
-  
-  }
+}
 
-  .centered-section p {
-    font-size: 1.2em;
-  }
-  
-  /* Responsive adjustments for tablets */
+.grid-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.grid-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.grid-text {
+  font-size: 1.2em;
+}
+
+.centered-section {
+  text-align: center;
+}
+
+.centered-section p {
+  font-size: 1.2em;
+}
+
+/* Responsive adjustments for tablets */
 @media (max-width: 1024px) {
-    .grid-section {
-      grid-template-columns: 1fr; /* Stack content in one column */
-    }
+  .grid-section {
+    grid-template-columns: 1fr; /* Stack content in one column */
   }
-  
-  /* Responsive adjustments for small tablets and large phones */
-  @media (max-width: 768px) {
-    .grid-text {
-      font-size: 1em; /* Slightly smaller font size */
-    }
+}
+
+/* Responsive adjustments for small tablets and large phones */
+@media (max-width: 768px) {
+  .grid-text {
+    font-size: 1em; /* Slightly smaller font size */
   }
-  
-  /* Responsive adjustments for small phones */
-  @media (max-width: 480px) {
-    .grid-text {
-      font-size: 0.9em; /* Even smaller font size for very small devices */
-    }
+}
+
+/* Responsive adjustments for small phones */
+@media (max-width: 480px) {
+  .grid-text {
+    font-size: 0.9em; /* Even smaller font size for very small devices */
   }
-  
+}
