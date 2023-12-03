@@ -29,7 +29,7 @@ function Header() {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/about">About</a>
+              <a href="/about-us">About</a>
             </li>
             <li>
               <a href="/portfolio">Portfolio</a>

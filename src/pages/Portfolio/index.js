@@ -34,6 +34,8 @@ const Portfolio = (props) => {
 
   return (
     <div className="portfolio">
+      <h1>Portfolio</h1>
+      <h2> Explore some of our recent projects </h2>
       {isModalOpen && selectedProject && (
         <div className="modal" onClick={closeModal}>
           <div className="modal-content">
