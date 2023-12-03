@@ -10,7 +10,6 @@ const Portfolio = (props) => {
   const getProjects = useCallback(async () => {
     try {
       const res = await axios.get(`${props.URL}/projects`);
-      console.log(`${props.URL}/projects`)
       setProjects(res.data);
     } catch (err) {
       console.error("Error fetching projects:", err);
@@ -21,7 +20,7 @@ const Portfolio = (props) => {
     getProjects();
   }, [getProjects]);
 
-  console.log("the projects are", projects);
+
 
   const handleProjectClick = (project) => {
     setSelectedProject(project);

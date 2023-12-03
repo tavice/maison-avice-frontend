@@ -11,7 +11,7 @@ const AboutUs = ( props ) => {
     try {
       const response = await axios.get(`${props.URL}/about-us`);
       setAboutData(response.data);
-      console.log("aboutData is", aboutData);
+     
     } catch (error) {
       console.error("Error fetching about us data:", error);
     }
