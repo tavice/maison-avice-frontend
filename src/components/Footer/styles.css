@@ -1,96 +1,106 @@
 .footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 40px;
-    background-color: #21204C;
-    color: white;
-    align-items: center;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  }
-  
-  .footer h4 {
-    font-family: 'The Seasons', sans-serif;
-    font-size: 22px;
-    margin-bottom: 20px;
-  }
-  
-  .footer p,
-  .footer a {
-    font-family: 'Antipasto', sans-serif;
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: white;
-    text-decoration: none;
-  }
-  
-  .footer-newsletter form {
-    display: flex;
-    flex-wrap: wrap; /* Allow wrapping inside the form */
-  }
-  
-  .footer-newsletter input {
-    padding: 10px;
-    margin-right: 10px;
-    border: none;
-    border-radius: 5px;
-  }
-  
-  .footer-newsletter button {
-    padding: 10px 20px;
-    background-color: #555;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  background-color: #21204c;
+  color: white;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
 
-  
-  
-  .footer-newsletter button:hover {
-    background-color: #777;
-  }
-  
+.footer h4 {
+  font-family: "The Seasons", sans-serif;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
 
-  /* Mobile styles */
+.footer p,
+.footer a {
+  font-family: "Antipasto", sans-serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-newsletter form {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping inside the form */
+}
+
+.footer-newsletter input {
+  padding: 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.footer-newsletter button {
+  padding: 10px 20px;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.footer-newsletter button:hover {
+  background-color: #777;
+}
+
+.footer-note {
+  font-family: "The Seasons", sans-serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 12px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mobile styles */
 @media (max-width: 768px) {
-    .footer {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 20px; 
-    }
-  
-    .footer-contact,
-    .footer-social,
-    .footer-newsletter {
-      width: 100%; 
-      margin-bottom: 20px; 
-      text-align: center;
-    }
-
-    .footer-newsletter form {
-      justify-content: center;
-    }
-  
-    .footer-newsletter input {
-      flex: 1 0 70%;
-      margin-right: 10px;
-    }
-  
-    .footer-newsletter button {
-      flex: 1 0 28%; 
-    }
-
-    .footer-social {
-      /* Wrap social links on smaller screens */
-      flex-wrap: wrap;
-      justify-content: center; /* Center the links */
-    }
-    
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
   }
 
+  .footer-contact,
+  .footer-social,
+  .footer-newsletter {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
 
-  /* Very small devices (phones, 600px and down) */
+  .footer-newsletter form {
+    justify-content: center;
+  }
+
+  .footer-newsletter input {
+    flex: 1 0 70%;
+    margin-right: 10px;
+  }
+
+  .footer-newsletter button {
+    flex: 1 0 28%;
+  }
+
+  .footer-social {
+    /* Wrap social links on smaller screens */
+    flex-wrap: wrap;
+    justify-content: center; /* Center the links */
+  }
+}
+
+/* Very small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .footer h4 {
     font-size: 20px; /* Slightly smaller to fit narrow screens */

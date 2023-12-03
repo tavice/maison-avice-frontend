@@ -24,6 +24,10 @@ function Footer() {
           <button type="submit">Subscribe</button>
         </form>
       </div>
+      
+      <div className="footer-note">
+        <p>Discover the perfect blend of traditional building methods and cutting-edge technology with Maison Avice, a leader in luxury sustainable architecture.</p>
+      </div>
     </footer>
   );
 }

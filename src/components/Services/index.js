@@ -1,31 +1,29 @@
 import React from 'react';
 import "./styles.css";
-import serviceImage1 from '../../assets/images/service1.jpeg'; // https://unsplash.com/photos/B8dk2AakWMY?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
-import serviceImage2 from '../../assets/images/service2.jpeg'; //https://unsplash.com/photos/B8dk2AakWMY?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
-import serviceImage3 from '../../assets/images/service3.jpeg'; //Photo by <a href="https://unsplash.com/@iamromankraft?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Roman Kraft</a> on <a href="https://unsplash.com/photos/7Y56qLx2oAk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  
+import serviceImage1 from '../../assets/images/service1.jpeg';
+import serviceImage2 from '../../assets/images/service2.jpeg';
+import serviceImage3 from '../../assets/images/service3.jpeg';
 
 function Services() {
   return (
     <section className="services">
-      <h2>Our Services</h2>
+      <h2>Our Architectural and Design Services</h2>
       <div className="services-grid">
         <div className="service-card">
-          <img src={serviceImage1} alt="Service 1" />
-          <h3>New Construction </h3>
-          <p>Creating elegant and functional living spaces that reflect your unique style.</p>
+          <img src={serviceImage1} alt="Luxury New Construction in San Francisco Bay Area" />
+          <h3>New Construction</h3>
+          <p>Specializing in luxury new construction, Maison Avice creates elegant, sustainable living spaces in the San Francisco Bay Area, blending traditional methods with modern technology.</p>
         </div>
         <div className="service-card">
-          <img src={serviceImage2} alt="Service 2" />
+          <img src={serviceImage2} alt="High-end Remodeling and Renovation Services" />
           <h3>Remodel</h3>
-          <p>Turning an exisitng space into the new space of your dream !</p>
+          <p>Transform your existing space into a modern, luxurious environment. Our remodeling services focus on sustainable, high-quality renovations that redefine comfort and style.</p>
         </div>
         <div className="service-card">
-          <img src={serviceImage3} alt="Service 3" />
+          <img src={serviceImage3} alt="Custom Sustainable Furniture Design" />
           <h3>Custom Furniture</h3>
-          <p>Designing bespoke furniture pieces that add character and functionality to your space.</p>
+          <p>Our custom furniture design services offer unique, eco-friendly pieces tailored to your preferences, complementing our commitment to sustainable luxury living.</p>
         </div>
-       
       </div>
     </section>
   );

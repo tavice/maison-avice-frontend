@@ -1,12 +1,7 @@
 {
   "short_name": "Maison Avice",
-  "name": "Maison Avice Website",
+  "name": "Maison Avice - Luxury Sustainable Architecture",
   "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
     {
       "src": "android-chrome-192x192.png",
       "type": "image/png",
@@ -16,10 +11,16 @@
       "src": "android-chrome-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#21204c",
+  "background_color": "#ffffff",
+  "description": "Maison Avice - Pioneering sustainable luxury architecture in the San Francisco Bay Area."
 }
