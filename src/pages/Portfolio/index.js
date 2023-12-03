@@ -21,7 +21,7 @@ const Portfolio = (props) => {
     getProjects();
   }, [getProjects]);
 
-  console.log("projects are", projects);
+  console.log("the projects are", projects);
 
   const handleProjectClick = (project) => {
     setSelectedProject(project);
