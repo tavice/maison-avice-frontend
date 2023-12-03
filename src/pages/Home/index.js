@@ -8,7 +8,7 @@ import Services from "../../components/Services";
 // import Testimonials from "../../components/Testimonials"; //TO DO: Add Testimonials component
 
 
-const Home = () => {
+const Home = (props) => {
   const aboutUsRef = useRef(null); // Create a ref for the AboutUs component
 
   const scrollToAbout = () => {
@@ -20,7 +20,7 @@ const Home = () => {
       <Banner scrollToAbout={scrollToAbout} />
       <div ref={aboutUsRef}>
         {/* Attach the ref to the aboutUs div */}
-        <AboutUs />
+        <AboutUs URL={props.URL}/>
       </div>
       <Services />
       

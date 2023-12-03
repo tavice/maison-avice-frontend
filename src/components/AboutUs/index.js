@@ -1,29 +1,45 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import "./styles.css";
-import teamImage from "../../assets/images/team-image.jpeg"; //Photo by <a href="https://unsplash.com/@kobuagency?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">KOBU Agency</a> on <a href="https://unsplash.com/photos/7okkFhxrxNw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+import teamImage from "../../assets/images/team-image.jpeg";
 
-const AboutUs = () => {
+const AboutUs = ({ URL }) => {
+  const [aboutData, setAboutData] = useState(null);
+
+  useEffect(() => {
+    const fetchAboutData = async () => {
+      try {
+        const response = await axios.get(`${URL}/about-us`);
+        setAboutData(response.data);
+        console.log("about us data is", response.data);
+      } catch (error) {
+        console.error("Error fetching about us data:", error);
+      }
+    };
+
+    fetchAboutData();
+  }, [URL]);
+
   return (
     <section className="about-us">
-      <div className="about-text">
-        <h2>About Us</h2>
-
-        <h3>
-          Maison Avice is a full-service A-to-Z architectural design company
-          focused on serving the luxury housing market of the San Francisco Bay
-          Area
-        </h3>
-        <ul>
-          <li> Traditional Building Methods </li>
-          <li> Cutting-Edge Technology </li>
-
-          <li> Repurposed recycled furniture to reduce emissions </li>
-          <li>Carbon neutral vendors and sustainable partners </li>
-        </ul>
-      </div>
-      <div className="about-image">
-        <img src={teamImage} alt="Our Team" />
-      </div>
+      {aboutData ? (
+        <>
+          <div className="about-text">
+            <h2>{aboutData.title}</h2>
+            <h3>{aboutData.description}</h3>
+            <ul>
+              {aboutData.features.map((feature, index) => (
+                <li key={index}>{feature}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="about-image">
+            <img src={teamImage} alt="Our Team" />
+          </div>
+        </>
+      ) : (
+        <p>Loading...</p> // Or any other placeholder content
+      )}
     </section>
   );
 };
