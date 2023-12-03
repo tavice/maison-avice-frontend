@@ -4,13 +4,14 @@ import "./styles.css";
 import teamImage from "../../assets/images/team-image.jpeg";
 
 const AboutUs = ( props ) => {
-  const [aboutData, setAboutData] = useState(null);
+  const [aboutData, setAboutData] = useState({ features: [] });
 
   // Define fetchAboutData using useCallback
   const fetchAboutData = useCallback(async () => {
     try {
       const response = await axios.get(`${props.URL}/about-us`);
       setAboutData(response.data);
+      console.log("aboutData is", aboutData);
     } catch (error) {
       console.error("Error fetching about us data:", error);
     }
@@ -39,7 +40,7 @@ const AboutUs = ( props ) => {
           </div>
         </>
       ) : (
-        <p>Loading...</p> // Placeholder for loading state
+        <p>Loading...</p> 
       )}
     </section>
   );
