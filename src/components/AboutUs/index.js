@@ -1,24 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import "./styles.css";
 import teamImage from "../../assets/images/team-image.jpeg";
 
-const AboutUs = ({ URL }) => {
+const AboutUs = ( props ) => {
   const [aboutData, setAboutData] = useState(null);
 
-  useEffect(() => {
-    const fetchAboutData = async () => {
-      try {
-        const response = await axios.get(`${URL}/about-us`);
-        setAboutData(response.data);
-        console.log("about us data is", response.data);
-      } catch (error) {
-        console.error("Error fetching about us data:", error);
-      }
-    };
+  // Define fetchAboutData using useCallback
+  const fetchAboutData = useCallback(async () => {
+    try {
+      const response = await axios.get(`${props.URL}/about-us`);
+      setAboutData(response.data);
+    } catch (error) {
+      console.error("Error fetching about us data:", error);
+    }
+  }, [props.URL]);
 
+  // useEffect to call fetchAboutData when the component mounts or props.URL changes
+  useEffect(() => {
     fetchAboutData();
-  }, [URL]);
+  }, [fetchAboutData]);
 
   return (
     <section className="about-us">
@@ -38,7 +39,7 @@ const AboutUs = ({ URL }) => {
           </div>
         </>
       ) : (
-        <p>Loading...</p> // Or any other placeholder content
+        <p>Loading...</p> // Placeholder for loading state
       )}
     </section>
   );

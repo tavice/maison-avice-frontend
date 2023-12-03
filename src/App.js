@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 //import pages
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
-import ContactUs from "./pages/ContactUs";
+// import ContactUs from "./pages/ContactUs"; TO DO
 
 //import components
 import Header from "./components/Header";
