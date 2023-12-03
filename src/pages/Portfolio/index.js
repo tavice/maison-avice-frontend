@@ -1,5 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import Masonry from "masonry-layout";
+import axios from "axios";
 import "./styles.css";
 
 // Import images from assets
@@ -8,10 +9,28 @@ import chalet_forestier from "../../assets/images/portfolio_images/chalet_forest
 import pacific_cliff_mansion from "../../assets/images/portfolio_images/pacific_cliff_mansion.png";
 import andalousian_villa from "../../assets/images/portfolio_images/andalousian_mansion.png";
 
-const Portfolio = () => {
+const Portfolio = (props) => {
   const [activeIndex, setActiveIndex] = useState(-1);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [projects, setProjects] = useState([]);
+
+  const getProjects = useCallback(async () => {
+    try {
+      const res = await axios.get(`${props.URL}/projects`);
+
+      console.log("data is", res.data);
+      setProjects(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  }, [props.URL]);
+
+  useEffect(() => {
+    getProjects();
+  }, [getProjects]);
+
+  console.log("projects are", projects);
 
   const gridRef = useRef(null);
   const masonryInstance = useRef(null);
@@ -48,7 +67,6 @@ const Portfolio = () => {
     { id: 3, title: "Pacific Cliff Estate", image: pacific_cliff_mansion },
     { id: 4, title: "Andalousian Villa", image: andalousian_villa },
     { id: 4, title: "Andalousian Villa", image: andalousian_villa },
-   
   ];
 
   return (
@@ -61,27 +79,27 @@ const Portfolio = () => {
       )}
       <div ref={gridRef} className="grid">
         <div className="grid-sizer">
-        {portfolioItems.map((item) => (
-          <div
-            key={item.id}
-            className={`grid-item ${activeIndex === item.id ? "active" : ""}`}
-            onClick={() => handleImageClick(item.image)}
-            tabIndex={0}
-            onKeyPress={(event) =>
-              event.key === "Enter" && handleImageClick(item.image)
-            }
-            style={{
-              backgroundImage: `url(${item.image})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-            <img src={item.image} alt={item.title} />
-            <div className="title-overlay">
-              <h3>{item.title}</h3>
+          {portfolioItems.map((item) => (
+            <div
+              key={item.id}
+              className={`grid-item ${activeIndex === item.id ? "active" : ""}`}
+              onClick={() => handleImageClick(item.image)}
+              tabIndex={0}
+              onKeyPress={(event) =>
+                event.key === "Enter" && handleImageClick(item.image)
+              }
+              style={{
+                backgroundImage: `url(${item.image})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              <img src={item.image} alt={item.title} />
+              <div className="title-overlay">
+                <h3>{item.title}</h3>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
         </div>
       </div>
     </div>

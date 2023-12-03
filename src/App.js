@@ -11,6 +11,10 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Portfolio from "./pages/Portfolio";
 
+
+//URL to connect to backend:
+const URL = process.env.REACT_APP_API_URL;
+
 function App() {
   return (
     <div className="App">
@@ -19,7 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/portfolio" element={<Portfolio URL={URL}/>} />
       </Routes>
 
       <Footer />
