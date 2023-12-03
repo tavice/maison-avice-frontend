@@ -34,6 +34,9 @@ const AboutUs = ( props ) => {
                 <li key={index}>{feature}</li>
               ))}
             </ul>
+            <h3>
+              <a href="https://www.maisonavice.com/portfolio"> See our Work</a>
+            </h3>
           </div>
           <div className="about-image">
             <img src={teamImage} alt="Our Team" />

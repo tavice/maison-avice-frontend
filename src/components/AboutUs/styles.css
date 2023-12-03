@@ -37,6 +37,12 @@
     margin-bottom: 0.5rem; /* Add some space between list items */
     font-size: 1.25rem;
   }
+
+  .about-text a {
+    color: #21204C;
+    text-decoration: none;
+    font-weight: bold;
+  }
   
   .about-image {
     max-width: 100%; /* Ensure image container doesn't overflow */

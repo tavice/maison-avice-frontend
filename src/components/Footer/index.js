@@ -13,7 +13,7 @@ function Footer() {
       <div className="footer-social">
         <h4>Follow Us</h4>
         <a href="#facebook">Facebook</a>
-        <a href="#twitter">Twitter</a>
+        <a href="https://www.linkedin.com/in/anna-wender/">Linkedin</a>
         <a href="#instagram">Instagram</a>
        
       </div>
