@@ -10,6 +10,7 @@
 .nav-banner {
   display: flex;
   background-color: #21204c;
+  justify-content: space-between;
   width: 100%;
   height: 120px; /* Fixed height */
   flex-direction: row;
@@ -80,6 +81,7 @@
 .nav {
   display: flex;
   align-items: center;
+  margin-right: 2%;
   justify-content: center;
   transition: all 0.3s;
   font-size: 2em;
