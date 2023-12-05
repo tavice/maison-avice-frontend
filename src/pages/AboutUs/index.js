@@ -35,6 +35,7 @@ const AboutUs = (props) => {
                 <h2>{aboutData.founderInfo.title}</h2>
                 <p>{aboutData.founderInfo.education}</p>
                 <p>{aboutData.founderInfo.description}</p>
+                <a href="https://calendly.com/maisonavice/book-your-discovery-call" target="_blank" rel="noreferrer"> book your call with us !</a>
               </div>
             </div>
 

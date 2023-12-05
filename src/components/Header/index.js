@@ -10,15 +10,13 @@ function Header() {
     setMenuOpen(!isMenuOpen);
   };
 
-
-
   return (
     <header className="header">
       <div className="nav-banner">
         <div className="logo-image-banner">
-          <a href="/" className='link-logo-image-banner'>
-          <img src={logoImageMonogram} alt="Maison Avice" />
-          <h1 className="company-name-h1-banner">MAISON AVICE</h1>
+          <a href="/" className="link-logo-image-banner">
+            <img src={logoImageMonogram} alt="Maison Avice" />
+            <h1 className="company-name-h1-banner">MAISON AVICE</h1>
           </a>
         </div>
         <button className="menu-button" onClick={toggleMenu}>
@@ -39,8 +37,10 @@ function Header() {
 
             <li>
               <a
-                href="mailto:thomasavice@maisonavice.com?subject=Contact%20from%20Our%20Website&body=Hello,%20I%20would%20like%20to%20inquire%20about..."
+                href="https://calendly.com/maisonavice/book-your-discovery-call"
                 className="contact-button"
+                target="_blank"
+                rel="noreferrer"
               >
                 Contact Us
               </a>
