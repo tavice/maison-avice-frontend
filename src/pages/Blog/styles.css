@@ -1,10 +1,7 @@
-
-
+/* Blog container */
 .blog-container {
-    min-height: 50vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* 75% for articles, 25% for sidebar */
     padding: 4rem 2rem;
     background-color: #FEEDEB;
     gap: 2rem;
@@ -12,23 +9,27 @@
     height: 100%;
   }
   
-  .blog-title {
-    font-family: 'The Seasons', sans-serif;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #21204C;
+  /* Left column for articles */
+  .blog-articles {
+    max-width: 600px;
   }
   
-  .blog-posts {
-    max-width: 600px;
-    text-align: center;
+  .blog-post {
+    margin-bottom: 2rem;
   }
   
   .blog-post h2 {
     font-family: 'The Seasons', sans-serif;
+    text-transform: uppercase;
     font-size: 2rem;
     margin-bottom: 1rem;
     color: #21204C;
+  }
+  
+  .blog-post img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
   }
   
   .blog-post p {
@@ -37,9 +38,216 @@
     margin-bottom: 1rem;
   }
   
-  .blog-post a {
-    color: #21204C;
-    text-decoration: none;
-    font-weight: bold;
+  /* Right column for article details, author section, etc. */
+  .sidebar {
+    padding-left: 20px;
+    border-left: 1px solid #21204C; /* Add a vertical border to separate sidebar from content */
   }
   
+  /* Author section */
+  .author-section {
+    margin-top: 20px;
+    padding-bottom: 20px; /* Add padding to separate sections */
+    border-bottom: 1px solid #21204C; /* Add a horizontal border to separate sections */
+  }
+  
+  .author-section h3 {
+    font-family: 'Antipasto', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #21204C;
+    padding-bottom: 20px; /* Add padding to separate sections */
+    border-bottom: 1px solid #21204C;
+  }
+  
+  /* Search section */
+  .search-section {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #21204C;
+  }
+  
+  /* Recent posts section */
+  .recent-posts-section {
+    margin-top: 20px;
+    padding-bottom: 20px; /* Add padding to separate sections */
+    border-bottom: 1px solid #21204C;
+  }
+  
+  .recent-posts-section h3 {
+    font-family: 'Antipasto', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #21204C;
+  }
+  
+  /* Title for recent posts */
+  .title-sidebar h2 {
+    font-family: 'The Seasons', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #21204C;
+    text-align: left;
+    text-decoration: none;
+  }
+  
+  /* Link for recent posts */
+  .title-sidebar a {
+    text-decoration: none;
+    color: #21204C;
+  }
+  
+  /* Responsive adjustments */
+  @media (min-width: 768px) {
+    /* For larger screens */
+    .blog-container {
+      grid-template-columns: 3fr 1fr; /* 75% for articles, 25% for sidebar */
+      padding: 4rem 2rem;
+      gap: 2rem;
+      margin-top: 80px;
+      height: 100%;
+    }
+  
+    .blog-articles {
+      max-width: 600px;
+    }
+  
+    .sidebar {
+      padding-left: 20px;
+      border-left: 1px solid #21204C; /* Add a vertical border to separate sidebar from content */
+    }
+  }
+/* Blog container */
+.blog-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* 75% for articles, 25% for sidebar */
+    padding: 4rem 2rem;
+    background-color: #FEEDEB;
+    gap: 2rem;
+    margin-top: 80px;
+    height: 100%;
+  }
+  
+  /* Left column for articles */
+  .blog-articles {
+    max-width: 600px;
+  }
+  
+  .blog-post {
+    margin-bottom: 2rem;
+    text-transform: none;
+    padding-bottom: 20px; /* Add padding to separate sections */
+    border-bottom: 1px solid #21204C;
+  }
+  
+  .blog-post h2 {
+    font-family: 'The Seasons', sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #21204C;
+  }
+  
+  .blog-post img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .blog-post p {
+    font-family: 'Antipasto', sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Right column for article details, author section, etc. */
+  .sidebar {
+    padding-left: 20px;
+    border-left: 1px solid #21204C; /* Add a vertical border to separate sidebar from content */
+  }
+  
+  /* Author section */
+  .author-section {
+    margin-top: 20px;
+    padding-bottom: 20px; /* Add padding to separate sections */
+    border-bottom: 1px solid #21204C; /* Add a horizontal border to separate sections */
+  }
+  
+  .author-section h3 {
+    font-family: 'Antipasto', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #21204C;
+    padding-bottom: 20px; /* Add padding to separate sections */
+    border-bottom: 1px solid #21204C;
+  }
+
+  .author-section button{
+    background-color: #ff6d32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Search section */
+  .search-section {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #21204C;
+  }
+  
+  /* Recent posts section */
+  .recent-posts-section {
+    margin-top: 20px;
+    padding-bottom: 20px; /* Add padding to separate sections */
+    border-bottom: 1px solid #21204C;
+  }
+  
+  .recent-posts-section h3 {
+    font-family: 'Antipasto', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #21204C;
+  }
+  
+  /* Title for recent posts */
+  .title-sidebar h2 {
+    font-family: 'The Seasons', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #21204C;
+    text-align: left;
+    text-decoration: none;
+  }
+  
+  /* Link for recent posts */
+  .title-sidebar a {
+    text-decoration: none;
+    color: #21204C;
+  }
+  
+  /* Responsive adjustments */
+  @media (min-width: 768px) {
+    /* For larger screens */
+    .blog-container {
+      grid-template-columns: 3fr 1fr; /* 75% for articles, 25% for sidebar */
+      padding: 4rem 2rem;
+      gap: 2rem;
+      margin-top: 80px;
+      height: 100%;
+    }
+  
+    .blog-articles {
+      max-width: 600px;
+    }
+  
+    .sidebar {
+      padding-left: 20px;
+      border-left: 1px solid #21204C; /* Add a vertical border to separate sidebar from content */
+    }
+  }
+    
