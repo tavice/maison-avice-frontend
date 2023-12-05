@@ -16,8 +16,10 @@ function Header() {
     <header className="header">
       <div className="nav-banner">
         <div className="logo-image-banner">
+          <a href="/" className='link-logo-image-banner'>
           <img src={logoImageMonogram} alt="Maison Avice" />
           <h1 className="company-name-h1-banner">MAISON AVICE</h1>
+          </a>
         </div>
         <button className="menu-button" onClick={toggleMenu}>
           {isMenuOpen ? "X" : "☰"}

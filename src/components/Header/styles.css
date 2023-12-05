@@ -37,6 +37,16 @@
   padding-left: 20px;
 }
 
+/*Link logo and image*/
+
+.link-logo-image-banner{
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: row;
+
+}
+
 /* Image styles */
 .logo-image-banner img {
   max-width: 200px; /* Maximum width to control sizing on larger screens */
