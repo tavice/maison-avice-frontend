@@ -16,7 +16,7 @@ function Header() {
         <div className="logo-image-banner">
           <a href="/" className="link-logo-image-banner">
             <img src={logoImageMonogram} alt="Maison Avice" />
-            <h1 className="company-name-h1-banner">MAISON AVICE</h1>
+            <h2 className="company-name-h2-banner">MAISON AVICE</h2>
           </a>
         </div>
         <button className="menu-button" onClick={toggleMenu}>
