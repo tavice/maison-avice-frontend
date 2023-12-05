@@ -1,0 +1,45 @@
+
+
+.blog-container {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-color: #FEEDEB;
+    gap: 2rem;
+    margin-top: 80px;
+    height: 100%;
+  }
+  
+  .blog-title {
+    font-family: 'The Seasons', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #21204C;
+  }
+  
+  .blog-posts {
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .blog-post h2 {
+    font-family: 'The Seasons', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #21204C;
+  }
+  
+  .blog-post p {
+    font-family: 'Antipasto', sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .blog-post a {
+    color: #21204C;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
