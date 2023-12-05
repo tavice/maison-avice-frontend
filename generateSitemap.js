@@ -22,7 +22,7 @@ async function generateSitemap() {
   console.log(xmlString);
 
   // Save the sitemap to a file (optional)
-  fs.writeFileSync('sitemap.xml', xmlString);
+  fs.writeFileSync('public/sitemap.xml', xmlString);
 }
 
 generateSitemap();
