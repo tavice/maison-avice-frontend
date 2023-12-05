@@ -17,7 +17,7 @@
       sizes="16x16"
       href="%PUBLIC_URL%/favicon-16x16.png"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+   
 
     <!-- Meta Tags for Responsiveness and Theming -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -42,6 +42,80 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "name": "Maison Avice Website",
+    "description": "Maison Avice Blog - A company specialized in luxury sustainable architecture, construction, and design in the San Francisco Bay Area",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Maison Avice",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://moodboard94123.s3.us-west-2.amazonaws.com/Screenshot+2023-11-13+at+2.02.30+PM.png",
+        "width": 600,
+        "height": 60
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-510-914-4000",
+          "contactType": "customer service"
+        }
+      ]
+    },
+    "url": "https://www.maisonavice.com/blog",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.maisonavice.com/blog"
+    },
+    "datePublished": "2023-12-03T00:00:00Z",
+    "dateModified": "2023-12-03T00:00:00Z",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://moodboard94123.s3.us-west-2.amazonaws.com/Screenshot+2023-11-13+at+2.02.30+PM.png",
+      "width": 1200,
+      "height": 630
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Anna Wender"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.maisonavice.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Portfolio",
+          "item": "https://www.maisonavice.com/portfolio"
+        }
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Blog",
+          "item": "https://www.maisonavice.com/blog"
+        }
+      ]
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.maisonavice.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  
+     
 
     <title>
       Maison Avice - Luxury Sustainable Architectural and Design in the San

@@ -3,6 +3,8 @@ import "./styles.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+
+
 const Blog = (props) => {
   const [blogPosts, setBlogPosts] = useState([]);
 
@@ -37,6 +39,7 @@ const Blog = (props) => {
 
   return (
     <div className="blog-container">
+        
       <div className="articles-column">
         <div className="blog-posts">
           {recentPosts.map((post) => (
