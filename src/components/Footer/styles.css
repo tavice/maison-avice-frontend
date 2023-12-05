@@ -8,11 +8,19 @@
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
+/* Define a class for numbers */
+.number-font {
+  font-family: serif; /* Use a serif font for numbers */
+}
+
+
 .footer h4 {
   font-family: "The Seasons", sans-serif;
   font-size: 22px;
   margin-bottom: 20px;
 }
+
+
 
 .footer p,
 .footer a {
@@ -27,6 +35,7 @@
   display: flex;
   flex-wrap: wrap; /* Allow wrapping inside the form */
 }
+
 
 .footer-newsletter input {
   padding: 10px;
@@ -60,8 +69,39 @@
   text-align: center;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.footer-social a {
+  padding: 10px;
+  margin-right: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+/* Add hover effect to social media icons */
+.linkedinIcon :hover {
+  color: #007bff; /* Change the color on hover (you can adjust the color as needed) */
+}
+.instaIcon :hover {
+  color: rgb(212, 108, 212); /* Change the color on hover (you can adjust the color as needed) */
+}
+
+/* Style the copyright notice */
+.footer-copyright {
+  font-size: 14px; /* Adjust the font size as needed */
+  padding-top: 10px; /* Add padding at the top to separate it from the text */
+  text-align: center; /* Center the copyright text */
+}
+
+/* Mobile styles for copyright notice */
+@media (max-width: 768px) {
+  .footer-copyright {
+    font-size: 12px; /* Adjust the font size for smaller screens */
+  }
 }
 
 /* Mobile styles */
@@ -123,5 +163,9 @@
 
   .footer-newsletter button {
     width: 100%; /* Full width for the button */
+  }
+
+  .footer-copyright {
+    font-size: 12px; /* Adjust the font size for smaller screens */
   }
 }

@@ -1,5 +1,6 @@
-import React from 'react';
+import React from "react";
 import "./styles.css";
+import { FaLinkedin, FaInstagram } from "react-icons/fa"; // Import icons from Font Awesome
 
 function Footer() {
   return (
@@ -7,15 +8,19 @@ function Footer() {
       <div className="footer-contact">
         <h4>Contact Us</h4>
         <p>123 Maison Avice Street, San Francisco, CA, USA</p>
-        <p>Email: info@maisonavice.com</p>
-        <p>Phone: +000 000 0000</p>
+        <p className="number-font">Email: info@maisonavice.com</p>
+        <p className="number-font">Phone: +000 000 0000</p>
       </div>
       <div className="footer-social">
         <h4>Follow Us</h4>
-        <a href="#facebook">Facebook</a>
-        <a href="https://www.linkedin.com/in/anna-wender/">Linkedin</a>
-        <a href="#instagram">Instagram</a>
-       
+        <a href="https://www.linkedin.com/in/anna-wender/" class="linkedinIcon">
+          <FaLinkedin />
+        </a>{" "}
+        {/* LinkedIn icon */}
+        <a href="#instagram" class="instaIcon">
+          <FaInstagram />
+        </a>{" "}
+        {/* Instagram icon */}
       </div>
       <div className="footer-newsletter">
         <h4>Subscribe to Our Newsletter</h4>
@@ -24,9 +29,17 @@ function Footer() {
           <button type="submit">Subscribe</button>
         </form>
       </div>
-      
+
       <div className="footer-note">
-        <p>Discover the perfect blend of traditional building methods and cutting-edge technology with Maison Avice, a leader in luxury sustainable architecture.</p>
+        <p>
+          Discover the perfect blend of traditional building methods and
+          cutting-edge technology with Maison Avice, a leader in luxury
+          sustainable architecture.
+        </p>
+        <p className="number-font">
+          &#169; 2023 Maison Avice. All rights reserved.
+        </p>{" "}
+        {/* Copyright notice */}
       </div>
     </footer>
   );
