@@ -8,6 +8,7 @@ async function generateSitemap() {
   sitemap.write({ url: '/', changefreq: 'daily', priority: 1.0 });
   sitemap.write({ url: '/about-us', changefreq: 'monthly', priority: 0.8 });
   sitemap.write({ url: '/portfolio', changefreq: 'weekly', priority: 0.9 });
+  sitemap.write({ url: '/blog', changefreq: 'weekly', priority: 0.9 });
 
   // End the sitemap stream
   sitemap.end();
