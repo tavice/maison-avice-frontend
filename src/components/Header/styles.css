@@ -168,13 +168,21 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  .logo-image-banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 0px;
+  }
   
   .logo-image-banner img {
     display: none;
   }
   
-  .company-name-h1-banner {
-    font-size: 2.5rem;
+  .company-name-h2-banner {
+    font-size: 1.5rem;
     margin-left: 0px;
   }
   

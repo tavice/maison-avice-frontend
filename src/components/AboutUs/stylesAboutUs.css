@@ -6,7 +6,6 @@
   padding: 4rem 2rem; /* Consistent padding */
   background-color: #FEEDEB;
   gap: 2rem; /* Spacing between elements */
-  margin-top: 80px;
   height: 100%;
   }
   
@@ -68,6 +67,7 @@
       flex-direction: row; /* Use row layout on larger screens */
       justify-content: space-evenly; /* Even spacing */
       align-items: flex-start; /* Align to the start for a clean look */
+      margin-top:0px
     }
   
     .about-text,
