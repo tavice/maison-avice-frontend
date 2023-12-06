@@ -7,9 +7,9 @@ function Footer() {
     <footer className="footer">
       <div className="footer-contact">
         <h4>Contact Us</h4>
-        <p>123 Maison Avice Street, San Francisco, CA, USA</p>
-        <p className="number-font">Email: info@maisonavice.com</p>
-        <p className="number-font">Phone: +000 000 0000</p>
+        <p className="number-font" >2465 Chestnut Street, San Francisco, CA, USA</p>
+        <p className="number-font">Email: thomasavice@maisonavice.com</p>
+        <p className="number-font">Phone: +415-407-3693</p>
       </div>
       <div className="footer-social">
         <h4>Follow Us</h4>
