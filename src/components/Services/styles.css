@@ -37,6 +37,7 @@
   .service-card p {
     font-size: 18px;
     padding: 0 20px 20px;
+    color: #21204c;
   }
 
   @media (max-width: 480px) {
