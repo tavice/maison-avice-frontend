@@ -13,11 +13,11 @@ function Footer() {
       </div>
       <div className="footer-social">
         <h4>Follow Us</h4>
-        <a href="https://www.linkedin.com/in/anna-wender/" class="linkedinIcon">
+        <a href="https://www.linkedin.com/in/anna-wender/" className="linkedinIcon">
           <FaLinkedin />
         </a>{" "}
         {/* LinkedIn icon */}
-        <a href="#instagram" class="instaIcon">
+        <a href="#instagram" className="instaIcon">
           <FaInstagram />
         </a>{" "}
         {/* Instagram icon */}

@@ -19,6 +19,8 @@ const AboutUs = (props) => {
     getAboutUsData();
   }, [getAboutUsData]);
 
+ 
+
   return (
     
       <div className="about-us-page">
