@@ -3,8 +3,12 @@ import axios from "axios";
 import "./stylesAboutUs.css";
 import teamImage from "../../assets/images/team-image.jpeg";
 
+//import loading spinner component
+import LoadingSpinner from "../loadingSpinner";
+
 const AboutUs = ( props ) => {
   const [aboutData, setAboutData] = useState({ features: [] });
+  const [isLoading, setIsLoading] = useState(true);
 
   // Define fetchAboutData using useCallback
   const fetchAboutData = useCallback(async () => {
@@ -22,8 +26,31 @@ const AboutUs = ( props ) => {
     fetchAboutData();
   }, [fetchAboutData]);
 
+  // Check if all project images are loaded
+  useEffect(() => {
+    // Check if all project images are loaded
+    const imagePromises = [teamImage].map((image) => {
+      const img = new Image();
+      img.src = image;
+      return new Promise((resolve) => {
+        img.onload = resolve;
+        img.onerror = resolve; // Handle image loading errors
+      });
+    });
+
+    Promise.all(imagePromises)
+      .then(() => {
+        setIsLoading(false); // All images are loaded
+      })
+      .catch(() => {
+        setIsLoading(false); // In case of loading errors
+      });
+  }, []);
+
   return (
     <section className="about-us">
+
+      {isLoading && <LoadingSpinner />}
       {aboutData ? (
         <>
           <div className="about-text">
@@ -39,7 +66,7 @@ const AboutUs = ( props ) => {
             </h3>
           </div>
           <div className="about-image">
-            <img src={teamImage} alt="Our Team" />
+            <img src={teamImage} alt="Our Team" width="300" height="200" />
           </div>
         </>
       ) : (

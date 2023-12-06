@@ -2,11 +2,17 @@ import React, { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import "./stylesPortfolio.css";
 
+//import loading spinner component
+import LoadingSpinner from "../../components/loadingSpinner";
+
 const Portfolio = (props) => {
   const [projects, setProjects] = useState([]);
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
+
+  //fetch images from database
   const getProjects = useCallback(async () => {
     try {
       const res = await axios.get(`${props.URL}/projects`);
@@ -21,7 +27,30 @@ const Portfolio = (props) => {
   }, [getProjects]);
 
 
+  // Check if all project images are loaded
 
+  useEffect(() => {
+    // Check if all project images are loaded
+    const imagePromises = projects.map((project) => {
+      const image = new Image();
+      image.src = project.imageUrl;
+      return new Promise((resolve) => {
+        image.onload = resolve;
+        image.onerror = resolve; // Handle image loading errors
+      });
+    });
+
+    Promise.all(imagePromises)
+      .then(() => {
+        setIsLoading(false); // All images are loaded
+      })
+      .catch(() => {
+        setIsLoading(false); // In case of loading errors
+      });
+  }, [projects]);
+
+
+//handle click on project
   const handleProjectClick = (project) => {
     setSelectedProject(project);
     setIsModalOpen(true);
@@ -36,6 +65,10 @@ const Portfolio = (props) => {
     <div className="portfolio">
       <h1>Portfolio</h1>
       <h2> Explore some of our recent projects </h2>
+      {isLoading ? ( // Render loading spinner if images are still loading
+        <LoadingSpinner />
+      ) : (
+        <>
       {isModalOpen && selectedProject && (
         <div className="modal" onClick={closeModal}>
           <div className="modal-content">
@@ -77,6 +110,9 @@ const Portfolio = (props) => {
           </div>
         ))}
       </div>
+
+      </>
+      )}
     </div>
   );
 };

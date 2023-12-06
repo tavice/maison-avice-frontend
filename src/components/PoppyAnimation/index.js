@@ -28,7 +28,7 @@ const PoppyAnimation = () => {
 
   return (
     <div className="poppy-container">
-      <img ref={poppyRef} src={poppyImage} alt="Poppy" className="poppy" />
+      <img ref={poppyRef} src={poppyImage} alt="Poppy" className="poppy" width="500" height="500"  />
     </div>
   );
 
