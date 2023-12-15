@@ -1,6 +1,6 @@
 {
   "short_name": "Maison Avice",
-  "name": "Maison Avice - Luxury Sustainable Architecture",
+  "name": "Maison Avice | Luxury Sustainable Architecture + Interior Design | San Francisco",
   "icons": [
     {
       "src": "android-chrome-192x192.png",
@@ -32,5 +32,5 @@
   "display": "standalone",
   "theme_color": "#21204c",
   "background_color": "#ffffff",
-  "description": "Maison Avice - Pioneering sustainable luxury architecture in the San Francisco Bay Area."
+  "description": "Live sustainably in style. Maison Avice: Full-service luxury architect + interior designer in San Francisco. Building a greener future, one home at a time. Contact us for a consultation"
 }
