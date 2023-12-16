@@ -54,7 +54,7 @@ const getMetaDescription = () => {
 };
 
 
-console.log('meta description', getMetaDescription());
+
 
   return (
     <div className="App">
