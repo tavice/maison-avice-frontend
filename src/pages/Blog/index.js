@@ -3,10 +3,10 @@ import "./styles.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-
-
 const Blog = (props) => {
   const [blogPosts, setBlogPosts] = useState([]);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [error, setError] = useState('');
 
   const getBlogPosts = useCallback(async () => {
     try {
@@ -14,6 +14,8 @@ const Blog = (props) => {
       setBlogPosts(res.data);
     } catch (err) {
       console.error("Error fetching blog posts:", err);
+      setError('Failed to fetch blog posts. Please try again later.');
+      
     }
   }, [props.URL]);
 
@@ -37,14 +39,21 @@ const Blog = (props) => {
     buttonText: "FIND OUT MORE",
   };
 
+  //Toggle sidebar
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  //RETURN
+
   return (
-    <div className="blog-container">
-        
+    <div className="blog-container" aria-live="polite">
       <div className="articles-column">
+      {error && <p className="error-message">{error}</p>}
         <div className="blog-posts">
           {recentPosts.map((post) => (
             <div key={post._id} className="blog-post">
-              <Link to={`/blog/${post._id}`} style={{textDecoration: "none" }}>
+              <Link to={`/blog/${post._id}`} style={{ textDecoration: "none" }}>
                 <h2>{post.title}</h2>
                 <img src={post.images[0].imageUrl} alt={post.title} />
               </Link>
@@ -53,14 +62,29 @@ const Blog = (props) => {
           ))}
         </div>
       </div>
-      <div className="sidebar">
+      <button
+        onClick={toggleSidebar}
+        className="sidebar-toggle"
+        aria-expanded={isSidebarOpen}
+        aria-controls="sidebar"
+      >
+        Toggle Sidebar
+      </button>
+      <div className={`sidebar ${isSidebarOpen ? "" : "collapsed-sidebar"}`}>
         <div className="author-section">
           <h3>Welcome to our Blog!</h3>
           <h2>{authorInfo.name}</h2>
           <p>{authorInfo.description}</p>
           <button
-            onClick={() => window.open("https://calendly.com/maisonavice/book-your-discovery-call", "_blank")}
-          >{authorInfo.buttonText}</button>
+            onClick={() =>
+              window.open(
+                "https://calendly.com/maisonavice/book-your-discovery-call",
+                "_blank"
+              )
+            }
+          >
+            {authorInfo.buttonText}
+          </button>
         </div>
         <div className="search-section">
           <h3>Search</h3>
