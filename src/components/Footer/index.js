@@ -37,7 +37,7 @@ function Footer() {
           sustainable architecture.
         </p>
         <p className="number-font">
-          &#169; 2023 Maison Avice. All rights reserved.
+          &#169; 2024 Maison Avice. All rights reserved.
         </p>{" "}
         {/* Copyright notice */}
       </div>
