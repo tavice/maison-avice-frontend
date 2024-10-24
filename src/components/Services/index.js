@@ -3,7 +3,7 @@ import "./styles.css";
 import serviceImage1 from '../../assets/images/service1.jpeg';
 import serviceImage2 from '../../assets/images/service2.jpeg';
 import serviceImage3 from '../../assets/images/service3.jpeg';
-import serviceImage4 from '../../assets/images/service4.jpeg';
+import serviceImage4 from '../../assets/images/service4.png';
 
 //import loading spinner
 import LoadingSpinner from "../loadingSpinner";
