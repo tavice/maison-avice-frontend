@@ -62,7 +62,7 @@ const AboutUs = ( props ) => {
               ))}
             </ul>
             <h3>
-              <a href="https://www.maisonavice.com/portfolio"> See our Work</a>
+              <a href="https://www.maisonavice.com/"> See our Work</a>
             </h3>
           </div>
           <div className="about-image">
