@@ -2,17 +2,16 @@ import "./App.css";
 import { Route, Routes, useLocation, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
-
 //import pages
-//import Home from "./pages/Home";
-//import AboutUs from "./pages/AboutUs";
-// import ContactUs from "./pages/ContactUs"; TO DO
-//import Portfolio from "./pages/Portfolio";
-//import Blog from "./pages/Blog";
+import Home from "./pages/Home";
+import AboutUs from "./pages/AboutUs";
+//import ContactUs from "./pages/ContactUs"; TO DO
+import Portfolio from "./pages/Portfolio";
+import Blog from "./pages/Blog";
 
 //import components
-//import Header from "./components/Header";
-//import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 //Import WIP page
 import WIPPage from "./components/WIP/WIPPage";
@@ -59,40 +58,37 @@ function App() {
   };
 
   return (
-    // <div className="App">
-    //   <Helmet>
-    //     <title>{generatePageTitle()}</title>
-    //     <meta name="description" content={getMetaDescription()} />
-    //   </Helmet>
-    //   <Header />
-
-    //   <Routes>
-    //     <Route path="/" element={<Home URL={URL} />} />
-    //     <Route path="/about-us" element={<AboutUs URL={URL} />} />
-    //     <Route path="/portfolio" element={<Portfolio URL={URL} />} />
-    //     <Route path="/blog" element={<Blog URL={URL} />} />
-    //     {/* <Route path="/contact-us" element={<ContactUs />} /> TO DO */}
-    //   </Routes>
-
-    //   <Footer />
-    // </div>
-
-
     <div className="App">
-    <Helmet>
-      <title>{generatePageTitle()}</title>
-      <meta name="description" content={getMetaDescription()} />
-    </Helmet>
-    
+      <Helmet>
+        <title>{generatePageTitle()}</title>
+        <meta name="description" content={getMetaDescription()} />
+      </Helmet>
+      <Header />
 
-    <Routes>
-      {/* WIP Redirect */}
-      <Route path="/wip" element={<WIPPage />} />
-      <Route path="*" element={<Navigate to="/wip" replace />} />
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Home URL={URL} />} />
+        <Route path="/about-us" element={<AboutUs URL={URL} />} />
+        <Route path="/portfolio" element={<Portfolio URL={URL} />} />
+        <Route path="/blog" element={<Blog URL={URL} />} />
+        {/* <Route path="/contact-us" element={<ContactUs />} /> TO DO */}
+      </Routes>
 
-    
-  </div>
+      <Footer />
+    </div>
+
+    // <div className="App">
+    // <Helmet>
+    //   <title>{generatePageTitle()}</title>
+    //   <meta name="description" content={getMetaDescription()} />
+    // </Helmet>
+
+    // <Routes>
+    //   {/* WIP Redirect */}
+    //   <Route path="/wip" element={<WIPPage />} />
+    //   <Route path="*" element={<Navigate to="/wip" replace />} />
+    // </Routes>
+
+    //</div>
   );
 }
 

@@ -68,12 +68,12 @@
 
   right: 20px; /* Adjust as needed */
   z-index: 101; /* Above the nav */
-  /* Ensure it is visually consistent */
+
   background: none;
   border: none;
   cursor: pointer;
   font-size: 2rem; /* Adjust as needed */
-  padding: 10px; /* Gives area for touch/click */
+  padding: 10px; 
   
 }
 
@@ -107,10 +107,11 @@
 
 /* Styles for the contact button */
 .contact-button {
+  display: flex;
   background-color: #ff6d32;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 20px;
   border-radius: 5px;
   font-size: 1em;
   cursor: pointer;
@@ -220,6 +221,8 @@
 
   .nav.open {
     display: flex;
+    align-content: center;
+    margin: 0;
   }
 
   /* Style the list within the mobile navigation */

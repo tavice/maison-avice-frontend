@@ -35,7 +35,8 @@ const AboutUs = (props) => {
               <div className="grid-text">
                 <h1>{aboutData.founderInfo.name}</h1>
                 <h2>{aboutData.founderInfo.title}</h2>
-                <p>{aboutData.founderInfo.education}</p>
+                <p className="educationSchool">{aboutData.founderInfo.education}</p>
+                <p>{aboutData.founderInfo.educationAdditional}</p>
                 <p>{aboutData.founderInfo.description}</p>
                 <a href="https://calendly.com/maisonavice/book-your-discovery-call" target="_blank" rel="noreferrer"> book your call with us !</a>
               </div>
