@@ -1,62 +1,61 @@
 .services {
-    padding: 50px;
-    text-align: center;
+  padding: 50px;
+  text-align: center;
 
-    margin: 0 auto; /* Centers the container */
-    background-color: #ff6d32;
-  }
+  margin: 0 auto;
+  background-color: #ff6d32;
+}
+.services h2 {
+  font-family: "The Seasons", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+}
+.service-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px; 
+}
+
+.service-card h3 {
+  font-size: 22px;
+  margin: 20px 0;
+}
+
+.service-card p {
+  font-size: 18px;
+  padding: 0 20px 20px;
+  color: #21204c;
+}
+
+@media (max-width: 480px) {
   .services h2 {
-    font-family: 'The Seasons', sans-serif;
-    font-size: 2.5rem; /* Larger font size for the title */
-    margin-bottom: 1rem;
-    color: white;
-  }
-  
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusts the number of columns based on container width */
-    gap: 30px;
-  }
-  
-  .service-card {
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    overflow: hidden;
-    padding: 20px; /* Adds padding inside the card */
-  }
-  .service-card img {
-    width: 100%;
-    height: auto;
-    max-height: 258px;
-  }
-  
-  .service-card h3 {
-    font-size: 22px;
-    margin: 20px 0;
-  }
-  
-  .service-card p {
-    font-size: 18px;
-    padding: 0 20px 20px;
-    color: #21204c;
+    font-size: 24px;
   }
 
-  @media (max-width: 480px) {
-    .services h2 {
-      font-size: 24px;
-    }
-    
-    .service-card h3 {
-      font-size: 20px;
-    }
-  
-    .service-card p {
-      font-size: 16px;
-    }
-  
-    .services-grid {
-      gap: 20px;
-    }
+  .service-card h3 {
+    font-size: 20px;
   }
-  
-  
+
+  .service-card p {
+    font-size: 16px;
+  }
+
+  .services-grid {
+    gap: 20px;
+  }
+}
