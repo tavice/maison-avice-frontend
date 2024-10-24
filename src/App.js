@@ -1,6 +1,7 @@
 import "./App.css";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
+
 
 //import pages
 //import Home from "./pages/Home";
