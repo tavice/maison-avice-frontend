@@ -20,7 +20,7 @@ function Banner({ scrollToAbout }) {
             <h1>MAISON AVICE</h1>
           </div>
           <div className="company-name-h2">
-            <h2>INTERIOR DESIGN</h2>
+            <h2>LUXURY • SUSTAINABILITY • HERITAGE</h2>
           </div>
         </div>
       </div>

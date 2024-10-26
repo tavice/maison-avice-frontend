@@ -31,10 +31,10 @@ function Header() {
             <li>
               <a href="/about-us">About</a>
             </li>
-            {/* <li>
-              <a href="/portfolio">Portfolio</a>
-            </li>
             <li>
+              <a href="/portfolio">Portfolio</a>
+            </li> 
+            {/* <li>
               <a href="/blog">Blog</a>
             </li> */}
 
