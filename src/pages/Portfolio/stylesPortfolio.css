@@ -81,30 +81,45 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(32, 32, 76, 0.8); /* Dark background */
+  background: rgba(32, 32, 76, 0.8); 
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000; /* Ensure modal is on top */
-  padding: 20px; /* Added padding for modal */
-  box-sizing: border-box; /* Include padding in width and height */
+  z-index: 1000; 
+  padding: 20px; 
+  box-sizing: border-box;
 }
 
 .modal img {
   max-width: 90%;
   max-height: 80%;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Shadow for images */
-  border-radius: 10px; /* Rounded corners for modal images */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+  border-radius: 10px; 
+  margin-top: 25px;
 }
 
 .modal-content {
-  background-color: white; /* Background for modal content */
-  padding: 20px; /* Padding inside modal */
-  border-radius: 10px; /* Rounded corners for modal content */
-  text-align: center; /* Centering text inside modal */
-  color: #21204c; /* Text color for modal */
-  max-width: 600px; /* Max width for modal content */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow for modal content */
+  background-color: white; 
+  padding: 20px; 
+  border-radius: 10px; 
+  text-align: center; 
+  color: #21204c; 
+  max-width: 600px; 
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.modal-details h3{
+  font-family: "The Seasons", sans-serif;
+  font-size: 2rem;
+  color: #21204c;
+  margin-bottom: 10px; /* Space between title and image */
+}
+
+.modal-details p {
+  margin-top: 20px; /* Space between image and details */
+  color: #21204c;
 }
 
 /* Responsive styles */

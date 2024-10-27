@@ -77,14 +77,24 @@ const Portfolio = (props) => {
                 <div className="modal-details">
                   <h3>{selectedProject.name}</h3>
                   <p>
-                    <strong>Description:</strong> {selectedProject.description}
+                    <strong>Description:</strong>{" "}
+                    <p style={{ fontFamily: "serif" }}>
+                      {selectedProject.description}{" "}
+                    </p>
                   </p>
                   <p>
-                    <strong>Address:</strong> {selectedProject.address}
+                    <strong>Address:</strong>{" "}
+                    <p style={{ fontFamily: "serif" }}>
+                      {" "}
+                      {selectedProject.address}
+                    </p>
                   </p>
                   <p>
                     <strong>Year of Construction:</strong>{" "}
-                    {selectedProject.year}
+                    <p style={{ fontFamily: "serif" }}>
+                      {" "}
+                      {selectedProject.year}{" "}
+                    </p>
                   </p>
                 </div>
               </div>

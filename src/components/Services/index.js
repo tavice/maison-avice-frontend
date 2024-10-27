@@ -55,6 +55,15 @@ useEffect(() => {
             <img src={service.imageUrl} alt={service.title} width="300" height="200" />
             <h3>{service.title}</h3>
             <p>{service.description}</p>
+            <a
+                href="https://calendly.com/maisonavice/book-your-discovery-call"
+                className="contact-button-service"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Inquire about our {service.title}!
+              </a>
+         
           </div>
         ))}
       </div>
