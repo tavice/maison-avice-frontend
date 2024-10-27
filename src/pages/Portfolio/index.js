@@ -11,7 +11,6 @@ const Portfolio = (props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
-
   //fetch images from database
   const getProjects = useCallback(async () => {
     try {
@@ -25,7 +24,6 @@ const Portfolio = (props) => {
   useEffect(() => {
     getProjects();
   }, [getProjects]);
-
 
   // Check if all project images are loaded
 
@@ -49,8 +47,7 @@ const Portfolio = (props) => {
       });
   }, [projects]);
 
-
-//handle click on project
+  //handle click on project
   const handleProjectClick = (project) => {
     setSelectedProject(project);
     setIsModalOpen(true);
@@ -69,49 +66,49 @@ const Portfolio = (props) => {
         <LoadingSpinner />
       ) : (
         <>
-      {isModalOpen && selectedProject && (
-        <div className="modal" onClick={closeModal}>
-          <div className="modal-content">
-            <img
-              src={selectedProject.imageUrl}
-              alt={selectedProject.name}
-              className="modal-image"
-            />
-            <div className="modal-details">
-              <h3>{selectedProject.name}</h3>
-              <p>
-                <strong>Description:</strong> {selectedProject.description}
-              </p>
-              <p>
-                <strong>Address:</strong> {selectedProject.address}
-              </p>
-              <p>
-                <strong>Year of Construction:</strong> {selectedProject.year}
-              </p>
+          {isModalOpen && selectedProject && (
+            <div className="modal" onClick={closeModal}>
+              <div className="modal-content">
+                <img
+                  src={selectedProject.imageUrl}
+                  alt={selectedProject.name}
+                  className="modal-image"
+                />
+                <div className="modal-details">
+                  <h3>{selectedProject.name}</h3>
+                  <p>
+                    <strong>Description:</strong> {selectedProject.description}
+                  </p>
+                  <p>
+                    <strong>Address:</strong> {selectedProject.address}
+                  </p>
+                  <p>
+                    <strong>Year of Construction:</strong>{" "}
+                    {selectedProject.year}
+                  </p>
+                </div>
+              </div>
             </div>
+          )}
+          <div className="grid">
+            {projects.map((project) => (
+              <div
+                key={project._id} // Assuming each project has a unique _id field
+                className="grid-item"
+                onClick={() => handleProjectClick(project)}
+                style={{
+                  backgroundImage: `url(${project.imageUrl})`,
+                  backgroundSize: "contain",
+                  backgroundPosition: "center",
+                }}
+              >
+                <div className="title-overlay">
+                  <h3>{project.name}</h3>
+                </div>
+              </div>
+            ))}
           </div>
-        </div>
-      )}
-      <div className="grid">
-        {projects.map((project) => (
-          <div
-            key={project._id} // Assuming each project has a unique _id field
-            className="grid-item"
-            onClick={() => handleProjectClick(project)}
-            style={{
-              backgroundImage: `url(${project.imageUrl})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-            <div className="title-overlay">
-              <h3>{project.name}</h3>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      </>
+        </>
       )}
     </div>
   );

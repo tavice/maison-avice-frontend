@@ -22,7 +22,7 @@ const Home = (props) => {
         {/* Attach the ref to the aboutUs div */}
         <AboutUs URL={props.URL}/>
       </div>
-      <Services />
+      <Services URL={props.URL} />
       
       {/* <Testimonials /> TO DO: Add Testimonials component */}
     </>
