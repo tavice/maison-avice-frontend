@@ -1,8 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 import { FaLinkedin, FaInstagram } from "react-icons/fa"; // Import icons from Font Awesome
 
-function Footer() {
+const Footer = (props) => {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch(`${props.URL}/subscribers`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+   
+
+      if (response.ok) {
+        setMessage("Thank you for subscribing!");
+      } else {
+        setMessage("Subscription failed. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setMessage("An error occurred. Please try again later.");
+    }
+  };
+
+ 
+
   return (
     <footer className="footer">
       <div className="footer-contact">
@@ -24,10 +54,17 @@ function Footer() {
       </div>
       <div className="footer-newsletter">
         <h4>Subscribe to Our Newsletter</h4>
-        <form>
-          <input type="email" placeholder="Enter your email" required />
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
           <button type="submit">Subscribe</button>
         </form>
+        {message && <p>{message}</p>}
       </div>
 
       <div className="footer-note">
@@ -43,6 +80,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

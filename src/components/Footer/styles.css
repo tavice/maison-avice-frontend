@@ -10,19 +10,19 @@
 
 /* Define a class for numbers */
 .number-font {
-  font-family:  sans-serif;
+  font-family:  serif;
 }
 
 
 .footer h4 {
-  font-family: "The Seasons", sans-serif;
+  font-family: "The Seasons", serif;
   font-size: 22px;
   margin-bottom: 20px;
 }
 
 
 p{
-  font-family: "Antipasto", sans-serif;
+  font-family: serif;
   font-size: 18px;
   margin-bottom: 10px;
   color: white;
@@ -30,7 +30,7 @@ p{
 }
 
 .footer a {
-  font-family: "Antipasto", sans-serif;
+  font-family: "Antipasto", serif;
   font-size: 18px;
   margin-bottom: 10px;
   color: white;
@@ -65,7 +65,7 @@ p{
 }
 
 .footer-note {
-  font-family: "The Seasons", sans-serif;
+  font-family: "The Seasons", serif;
   font-size: 18px;
   margin-bottom: 10px;
   margin-top: 12px;

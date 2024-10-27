@@ -73,7 +73,7 @@ function App() {
         {/* <Route path="/contact-us" element={<ContactUs />} /> TO DO */}
       </Routes>
 
-      <Footer />
+      <Footer URL={URL} />
     </div>
 
     // <div className="App">
