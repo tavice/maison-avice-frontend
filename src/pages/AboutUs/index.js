@@ -9,7 +9,7 @@ const AboutUs = (props) => {
     try {
       const res = await axios.get(`${props.URL}/about-us-data`);
       setAboutData(res.data);
-      //console.log("about us data", res.data);
+      //console.log("about us data", res.data); only for debugging
     } catch (err) {
       console.error("Error fetching projects:", err);
     }

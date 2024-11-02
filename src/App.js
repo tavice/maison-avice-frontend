@@ -18,10 +18,8 @@ import WIPPage from "./components/WIP/WIPPage";
 
 //URL to connect to backend:
 const URL = process.env.REACT_APP_API_URL;
-const videoUrl = process.env.REACT_VIDEO_APP_URL;
+const videoUrl = process.env.REACT_APP_VIDEO_URL;
 
-console.log('video url is ', videoUrl);
-console.log('api url is ', URL);
 
 function App() {
   const location = useLocation();
