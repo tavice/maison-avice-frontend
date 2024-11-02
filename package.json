@@ -11,6 +11,7 @@
     "dotenv": "^16.3.1",
     "fs": "^0.0.1-security",
     "gsap": "^3.12.2",
+    "letterizejs": "^2.0.1",
     "masonry-layout": "^4.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

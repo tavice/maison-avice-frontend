@@ -5,19 +5,28 @@ import React, { useRef } from "react";
 import Banner from "../../components/Banner";
 import AboutUs from "../../components/AboutUs";
 import Services from "../../components/Services";
+import VideoBanner from "../../components/VideoBanner";
 // import Testimonials from "../../components/Testimonials"; //TO DO: Add Testimonials component
+
+
 
 
 const Home = (props) => {
   const aboutUsRef = useRef(null); // Create a ref for the AboutUs component
+  const videoUrl = process.env.VIDEO_APP_URL;
+
+  console.log("videoUrl", videoUrl)
 
   const scrollToAbout = () => {
     aboutUsRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
+
   return (
     <>
       <Banner scrollToAbout={scrollToAbout} />
+      <VideoBanner videoUrl={videoUrl}  />
+      
       <div ref={aboutUsRef}>
         {/* Attach the ref to the aboutUs div */}
         <AboutUs URL={props.URL}/>

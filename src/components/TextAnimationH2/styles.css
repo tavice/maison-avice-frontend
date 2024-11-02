@@ -1,0 +1,107 @@
+#logo {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+/* Base styles for each letter's animation */
+.run-animation-h2 span {
+  font-family: "Antipasto", sans-serif;
+  font-size: 1.5em;
+  display: inline;
+  color: #21204c;
+  stroke-width: 1px;
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  fill: none;
+  opacity: 0;
+  animation: dash 1s ease-in-out forwards;
+}
+
+/* Keyframes for dash animation */
+@keyframes dash {
+  from {
+    stroke-dashoffset: 900;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+/* Sequential delays for each letter */
+/* .run-animation .char-0-0 {
+  animation-delay: 1s;
+} */
+.run-animation-h2 .char-1-0 {
+  animation-delay: 1s;
+}
+/* .run-animation .char-2-0 {
+  animation-delay: 1.6s;
+} */
+.run-animation-h2 .char-3-0 {
+  animation-delay: 1.3s;
+}
+/* .run-animation .char-4-0 {
+  animation-delay: 2.1s;
+} */
+.run-animation-h2 .char-5-0 {
+  animation-delay: 1.6s;
+}
+/* .run-animation .char-6-0 {
+  animation-delay: 2.7s;
+} */
+.run-animation-h2 .char-7-0 {
+  animation-delay: 1.9s;
+}
+/* .run-animation .char-8-0 {
+  animation-delay: 3.3s;
+} */
+.run-animation-h2 .char-9-0 {
+  animation-delay: 2.2s;
+}
+/* .run-animation .char-10-0 {
+  animation-delay: 3.9s;
+} */
+.run-animation-h2 .char-11-0 {
+  animation-delay: 2.5s;
+}
+.run-animation-h2 .char-14-0 {
+  animation-delay: 2.8s;
+}
+.run-animation-h2 .char-16-0 {
+  animation-delay: 3.1s;
+}
+.run-animation-h2 .char-18-0 {
+  animation-delay: 3.4s;
+}
+.run-animation-h2 .char-20-0 {
+  animation-delay: 3.7s;
+}
+.run-animation-h2 .char-22-0 {
+  animation-delay: 4.1s;
+}
+
+/* Optional filled class to transition fill color after animation */
+.run-animation-h2 .filled {
+  fill: #21204c;
+  transition: fill 0.5s ease-in;
+}
+
+/* Drop image styling */
+/* #drop-image {
+    position: absolute;
+    top: -100px;
+    left: 370px;
+    width: 8%;
+    height: auto;
+    animation: drop 1s ease-in-out forwards 4.0s;
+    opacity: 0;
+  }
+  
+  @keyframes drop {
+    0% { opacity: 0; transform: translateY(-100px); }
+    100% { opacity: 1; transform: translateY(170px); }
+  }
+   */
