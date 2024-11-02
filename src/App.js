@@ -18,6 +18,7 @@ import WIPPage from "./components/WIP/WIPPage";
 
 //URL to connect to backend:
 const URL = process.env.REACT_APP_API_URL;
+const videoUrl = process.env.REACT_VIDEO_APP_URL;
 
 function App() {
   const location = useLocation();
@@ -66,7 +67,7 @@ function App() {
       <Header />
 
       <Routes>
-        <Route path="/" element={<Home URL={URL} />} />
+        <Route path="/" element={<Home URL={URL} videoUrl={videoUrl}/>} />
         <Route path="/about-us" element={<AboutUs URL={URL} />} />
         <Route path="/portfolio" element={<Portfolio URL={URL} />} />
         <Route path="/blog" element={<Blog URL={URL} />} />

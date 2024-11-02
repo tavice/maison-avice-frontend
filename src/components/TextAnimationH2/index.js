@@ -32,7 +32,7 @@ const TextAnimationH2 = () => {
     <div id="logo" className="run-animation-h2">
       <div id="animated-text-h2">
         {"DESIGN | EVENTS | CONSTRUCTION".split("").map((char, index) => {
-          console.log("Rendering character:", char); // Log each character
+          //console.log("Rendering character:", char); // Log each character
           // If the character is a space, render an empty span
           return (
             <span key={index} className={char === " " ? "space" : ""}>

@@ -8,31 +8,24 @@ import Services from "../../components/Services";
 import VideoBanner from "../../components/VideoBanner";
 // import Testimonials from "../../components/Testimonials"; //TO DO: Add Testimonials component
 
-
-
-
 const Home = (props) => {
   const aboutUsRef = useRef(null); // Create a ref for the AboutUs component
-  const videoUrl = process.env.VIDEO_APP_URL;
-
-  console.log("videoUrl", videoUrl)
 
   const scrollToAbout = () => {
     aboutUsRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
-
   return (
     <>
       <Banner scrollToAbout={scrollToAbout} />
-      <VideoBanner videoUrl={videoUrl}  />
-      
+      <VideoBanner videoUrl={props.videoUrl} />
+
       <div ref={aboutUsRef}>
         {/* Attach the ref to the aboutUs div */}
-        <AboutUs URL={props.URL}/>
+        <AboutUs URL={props.URL} />
       </div>
       <Services URL={props.URL} />
-      
+
       {/* <Testimonials /> TO DO: Add Testimonials component */}
     </>
   );
